@@ -1,0 +1,620 @@
+/* ============================================
+   ADMIN DASHBOARD – MANAGEMENT STYLES
+   (Matches Student & Teacher designs)
+   ============================================ */
+:root {
+  --admin-sidebar-width: 260px;
+  --topbar-height: 72px;
+}
+
+body.admin-dashboard-body {
+  background: var(--off-white);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---------- SIDEBAR ---------- */
+.admin-sidebar {
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: var(--admin-sidebar-width);
+  background: rgba(10,37,64,0.94);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  display: flex; flex-direction: column;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+}
+.sidebar-brand {
+  padding: 28px 28px 24px;
+  font-size: 1.3rem; font-weight: 700;
+  display: flex; align-items: center; gap: 12px;
+}
+.brand-icon {
+  width: 36px; height: 36px;
+  background: var(--accent);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; color: #fff;
+}
+.sidebar-nav {
+  flex: 1; padding: 8px 12px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.sidebar-nav a {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: all 0.2s;
+  font-weight: 500; font-size: 0.95rem;
+}
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+.sidebar-nav a.active {
+  font-weight: 600;
+  background: rgba(56,189,248,0.2);
+}
+.sidebar-nav a.logout-link {
+  margin-top: auto;
+  color: rgba(255,255,255,0.6);
+}
+.sidebar-nav a.logout-link:hover {
+  background: rgba(239,68,68,0.2);
+  color: #ff6b6b;
+}
+.sidebar-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+}
+
+/* ============================================
+   ADMIN SIDEBAR – SAME HOVER ANIMATION AS STUDENT
+   ============================================ */
+
+.admin-sidebar .sidebar-nav a {
+  transition: all 0.2s ease;          /* ensures smooth movement */
+}
+
+.admin-sidebar .sidebar-nav a:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  transform: translateX(2px);         /* the subtle slide */
+}
+
+.admin-sidebar .sidebar-nav a.active {
+  background: rgba(56,189,248,0.18);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(56,189,248,0.15);
+}
+.mobile-menu-btn {
+  display: none;
+  background: none; border: none;
+  font-size: 1.8rem;
+  color: var(--navy);
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* ---------- TOPBAR ---------- */
+.admin-topbar {
+  position: fixed;
+  left: var(--admin-sidebar-width);
+  right: 0; top: 0;
+  height: var(--topbar-height);
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  display: flex; align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 998;
+}
+html.dark .admin-topbar {
+  background: rgba(11,26,47,0.8);
+  border-color: rgba(255,255,255,0.08);
+}
+.topbar-left {
+  display: flex; align-items: center; gap: 12px;
+}
+.topbar-welcome .topbar-title {
+  font-size: 0.85rem; color: var(--text-tertiary); font-weight: 600;
+}
+.topbar-welcome .topbar-welcome-text {
+  font-size: 1.05rem; color: var(--navy); font-weight: 500;
+}
+.topbar-right {
+  display: flex; align-items: center; gap: 20px;
+}
+.topbar-date {
+  font-size: 0.85rem; color: var(--text-secondary);
+}
+.topbar-notification {
+  background: none; border: none;
+  position: relative; font-size: 1.3rem; cursor: pointer;
+}
+.notification-badge {
+  position: absolute; top: 0; right: -4px;
+  background: #EF4444; color: #fff;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.topbar-profile {
+  display: flex; align-items: center; gap: 10px;
+  cursor: pointer;
+}
+.user-avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+}
+.user-info .user-name {
+  font-weight: 600; color: var(--navy);
+}
+.user-role {
+  font-size: 0.75rem; color: var(--text-tertiary);
+}
+
+/* ============================================
+   ADMIN NOTIFICATION DROPDOWN – MATCH STUDENT/TEACHER
+   ============================================ */
+
+.notification-wrapper {
+  position: relative;
+}
+/* Hide badge when count is zero (matches student/teacher) */
+.notification-badge[data-count="0"] {
+  display: none;
+}
+.notification-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  background: var(--white);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--mid-gray);
+  border-radius: 16px;
+  box-shadow: var(--shadow-xl);
+  z-index: 2000;
+  overflow: hidden;
+}
+
+html.dark .notification-dropdown {
+  background: rgba(26,47,74,0.95);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.notification-dropdown-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.notification-dropdown-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.notification-list {
+  max-height: 300px;
+  overflow-y: auto;            /* enables scroll only when needed */
+}
+
+.notification-item {
+  display: flex;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--light-gray);
+  transition: background 0.2s;
+}
+
+.notification-item:hover {
+  background: rgba(56,189,248,0.04);
+}
+
+.notification-item.unread {
+  background: rgba(56,189,248,0.06);
+}
+
+.notification-icon-small {
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.notification-content strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+
+.notification-content span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: block;
+}
+
+.notification-content small {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+  display: block;
+}
+
+.notification-mark-read {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-top: 1px solid var(--light-gray);
+  transition: background 0.2s;
+}
+
+.notification-mark-read:hover {
+  background: rgba(56,189,248,0.05);
+}
+
+/* Bell button hover */
+.notification-icon {
+  position: relative;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+  padding: 8px;
+  border-radius: 12px;
+  transition: background 0.2s;
+  background: transparent;
+  border: none;
+}
+
+.notification-icon:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+html.dark .notification-icon:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* Badge positioning */
+.notification-badge {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  background: #EF4444;
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+/* ---------- MAIN CONTENT ---------- */
+.admin-main {
+  margin-left: var(--admin-sidebar-width);
+  margin-top: var(--topbar-height);
+  padding: 40px;
+  min-height: 100vh;
+}
+.dash-section { display: none; }
+.dash-section.active { display: block; animation: fade 0.4s; }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+
+/* ---------- HERO ---------- */
+.admin-hero {
+  background: linear-gradient(135deg, var(--navy), #1a3b5c);
+  border-radius: 24px; padding: 48px 40px;
+  color: #fff; margin-bottom: 32px;
+  position: relative; overflow: hidden;
+}
+.admin-hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at top right, rgba(56,189,248,0.2), transparent 60%);
+}
+.admin-hero-content {
+  position: relative; z-index: 1;
+}
+.admin-hero-content h1 {
+  font-size: 2.4rem; font-weight: 700; margin-bottom: 12px;
+}
+.admin-hero-content p {
+  font-size: 1.1rem; opacity: 0.9; max-width: 600px;
+}
+
+/* ---------- STATS GRID ---------- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.stat-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex; align-items: center; gap: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.stat-icon { font-size: 2rem; }
+.stat-value { font-size: 2rem; font-weight: 700; color: var(--navy); }
+.stat-label { font-size: 0.85rem; color: var(--text-secondary); }
+
+/* ---------- QUICK ACTIONS ---------- */
+.quick-actions {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  margin-bottom: 32px;
+}
+.action-btn {
+  padding: 12px 24px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.action-btn:hover { background: var(--accent-dark); }
+
+/* ---------- RECENT ACTIVITY ---------- */
+.recent-activity {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.activity-list .activity-item {
+  display: flex; gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.activity-list .activity-item:last-child { border-bottom: none; }
+.activity-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 6px;
+}
+.activity-date { font-size: 0.8rem; color: var(--text-tertiary); }
+.activity-title { font-weight: 600; color: var(--navy); }
+.activity-desc { color: var(--text-secondary); }
+
+/* ---------- SECTION HEADER ROW ---------- */
+.section-header-row {
+  display: flex; justify-content: space-between;
+  align-items: center; margin-bottom: 20px;
+  flex-wrap: wrap; gap: 12px;
+}
+.search-input {
+  padding: 10px 16px;
+  border: 1px solid var(--mid-gray);
+  border-radius: 30px;
+  background: rgba(255,255,255,0.6);
+  min-width: 240px;
+}
+
+/* ---------- TABLES ---------- */
+.table-container {
+  overflow-x: auto;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.admin-table {
+  width: 100%; border-collapse: collapse;
+}
+.admin-table th {
+  background: var(--navy); color: #fff;
+  padding: 14px 16px; font-weight: 600;
+  text-align: left;
+}
+.admin-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  color: var(--text-primary);
+}
+.action-link {
+  color: var(--accent);
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 12px;
+}
+.action-link:hover { text-decoration: underline; }
+
+/* ---------- CLASSES GRID ---------- */
+.classes-grid-admin {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.class-card-admin {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.class-card-admin h3 { color: var(--navy); margin-bottom: 8px; }
+.class-card-admin p { color: var(--text-secondary); font-size: 0.9rem; }
+.assign-teacher-select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--mid-gray);
+  margin-top: 8px;
+}
+
+/* ---------- ASSIGNMENTS LIST ---------- */
+.assignments-list-admin {
+  display: flex; flex-direction: column; gap: 16px;
+}
+.assignment-admin-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 14px; padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.assignment-admin-card h4 { color: var(--navy); margin-bottom: 4px; }
+.assignment-admin-card p { color: var(--text-secondary); font-size: 0.9rem; }
+
+/* ---------- ANNOUNCEMENTS ---------- */
+.draft-announcement {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 18px; padding: 24px;
+  margin-bottom: 24px;
+}
+.draft-textarea {
+  width: 100%; padding: 12px; border-radius: 12px;
+  border: 1px solid var(--mid-gray);
+  background: rgba(255,255,255,0.8);
+  margin-bottom: 12px;
+  font-family: inherit; resize: vertical;
+}
+.announcements-list-admin {
+  display: flex; flex-direction: column; gap: 16px;
+}
+.announcement-admin-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 14px; padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.announcement-admin-card h4 { color: var(--navy); margin-bottom: 4px; }
+.announcement-admin-card p { color: var(--text-secondary); font-size: 0.9rem; }
+
+/* ---------- PLACEHOLDER ---------- */
+.placeholder-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 18px; padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.placeholder-card h3 { color: var(--navy); font-size: 1.5rem; margin-bottom: 12px; }
+.placeholder-card p { color: var(--text-secondary); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .admin-sidebar { transform: translateX(-100%); }
+  .admin-sidebar.open { transform: translateX(0); }
+  .sidebar-overlay { display: block; }
+  .admin-topbar { left: 0; }
+  .admin-main { margin-left: 0; padding: 20px; }
+  .mobile-menu-btn { display: block; }
+}
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   FIX: HERO & CARDS ALIGNMENT
+   ============================================ */
+
+/* Ensure hero sits in normal flow and doesn't overlap */
+.admin-hero {
+  position: relative;          /* already set, but confirm */
+  z-index: 1;
+  margin-bottom: 32px;        /* explicit space after hero */
+}
+
+/* Stats grid – ensure it’s below hero */
+.stats-grid {
+  position: relative;
+  z-index: 1;
+  clear: both;                /* prevent float conflicts */
+}
+
+/* Quick actions and recent activity */
+.quick-actions,
+.recent-activity {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 32px;
+}
+
+/* If any card has absolute positioning accidentally, reset it */
+.stat-card {
+  position: relative;         /* NOT absolute */
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-hero {
+    padding: 32px 24px;
+  }
+}
+/* ============================================
+   SAFE FIX: stat info stacking & overflow
+   ============================================ */
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.stat-value {
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  line-height: 1.4;
+}
+
+.activity-content {
+  min-width: 0;
+  flex: 1;
+}
+
+/* Ensure dashboard section respects the active class */
+.dash-section.active {
+  display: block;
+}
+
+/* ============================================
+   SPACING ADJUSTMENT – QUICK ACTIONS BREATHING ROOM
+   ============================================ */
+.stats-grid {
+  margin-bottom: 49px;        /* was 32px, now more space before quick actions */
+}
+
+.quick-actions {
+  margin-bottom: 40px;        /* more space before recent activity */
+}
+
+.recent-activity {
+  margin-top: 0;              /* ensure no extra gap on top */
+}
+

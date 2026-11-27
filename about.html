@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright International Secondary School | Home</title>
+    <meta
+      name="description"
+      content="Bright International Secondary School - Excellence in Education. Located in Mbieri Mbitaolu, Imo State, Nigeria."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- DARK MODE FLASH PREVENTION -->
+    <script>
+      (function() {
+        const saved = localStorage.getItem('bright_theme');
+        if (saved === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <!-- Premium Preloader -->
+    <!-- <div id="preloader">
+      <div class="preloader-content">
+        <div class="preloader-spinner"></div>
+        <div class="preloader-monogram">BISS</div>
+        <div class="preloader-sub">Loading…</div>
+      </div>
+    </div> -->
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">BI</div>
+          <div class="logo-text">
+            BRIGHT INTERNATIONAL
+            <span>Secondary School</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+          <!-- DARK MODE TOGGLE -->
+          <li class="theme-toggle-item">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch to dark mode" aria-pressed="false">
+              <!-- Sun icon (default light mode) -->
+              <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <!-- Moon icon (hidden by default) -->
+              <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+          </li>
+          <li><a href="admission.html" class="nav-cta">Enroll Now</a></li>
+        </ul>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+
+  <!-- ============================================
+       ABOUT PAGE HEADER – Full‑Background Image Hero
+       ============================================ -->
+  <header class="page-header about-hero">
+    <div class="hero-overlay-about"></div>
+    <div class="about-hero-content fade-in">
+      <h1>About Our School</h1>
+      <p class="hero-subtitle">Discover our story, mission, and commitment to world‑class secondary education.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>About</span>
+      </div>
+    </div>
+    <div class="about-hero-wave">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,0 C480,90 960,30 1440,70 L1440,100 L0,100 Z" fill="currentColor"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- History Section -->
+  <section class="section about-content">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <h3>Our History</h3>
+          <p>Bright International Secondary School was founded in 2005 with a vision to provide world-class secondary education to students in Imo State and beyond. Starting with just a handful of students and dedicated teachers, we have grown into one of the most respected institutions in the region.</p>
+          <p>Over the past 18 years, we have consistently produced outstanding academic results, with our students excelling in WAEC, NECO, and JAMB examinations. Our alumni have gone on to pursue successful careers in medicine, engineering, law, business, and the arts.</p>
+          <p>What began as a small community school has evolved into a comprehensive educational institution with modern facilities, a diverse student body, and a reputation for excellence that extends across Nigeria.</p>
+        </div>
+        <div class="about-text fade-in">
+          <h3>Our Philosophy</h3>
+          <p>We believe that every child has unique potential waiting to be unlocked. Our approach combines rigorous academics with character development, ensuring that students not only excel in examinations but also grow into responsible, ethical, and confident individuals.</p>
+          <p>Education at Bright International goes beyond the classroom. We emphasize critical thinking, creativity, communication, and collaboration - skills essential for success in the 21st century.</p>
+          <p>Our teachers are not just instructors; they are mentors who guide students through their formative years with patience, care, and professional expertise.</p>
+        </div>
+      </div>
+
+      <!-- Mission & Vision -->
+      <div class="mission-vision" style="margin-top: 60px;">
+        <div class="mv-card fade-in">
+          <div class="icon">&#9733;</div>
+          <h4>Our Mission</h4>
+          <p>To provide quality education that develops the intellectual, moral, and social capabilities of every student, preparing them to become responsible leaders and contributing members of society.</p>
+        </div>
+        <div class="mv-card fade-in">
+          <div class="icon">&#9734;</div>
+          <h4>Our Vision</h4>
+          <p>To be the leading secondary school in Nigeria, recognized for academic excellence, innovative teaching methods, and the holistic development of students who go on to impact the world positively.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section why-choose">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Why BISS</span>
+        <h2 class="section-title">Why Parents Choose Us</h2>
+        <p class="section-desc">We provide an environment where students thrive academically, socially, and morally.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card fade-in">
+          <div class="icon">&#9733;</div>
+          <h4>Academic Excellence</h4>
+          <p>Consistently high performance in WAEC, NECO, and JAMB with over 95% pass rates year after year.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="icon">&#9829;</div>
+          <h4>Caring Environment</h4>
+          <p>A safe, nurturing atmosphere where every student feels valued, respected, and supported in their growth.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="icon">&#9851;</div>
+          <h4>Modern Facilities</h4>
+          <p>Well-equipped science laboratories, computer labs, library, sports facilities, and comfortable classrooms.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="icon">&#9775;</div>
+          <h4>Experienced Staff</h4>
+          <p>Highly qualified and passionate teachers dedicated to bringing out the best in every student.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="icon">&#9734;</div>
+          <h4>Moral Values</h4>
+          <p>Strong emphasis on discipline, integrity, respect, and community service alongside academic learning.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="icon">&#9993;</div>
+          <h4>Extracurriculars</h4>
+          <p>Rich variety of clubs, sports teams, cultural activities, and leadership programs for all-round development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values Section -->
+  <section class="section core-values-section" id="core-values">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Our Foundation</span>
+        <h2 class="section-title">Core Values</h2>
+        <p class="section-desc">The principles that guide everything we do at Bright International Secondary School.</p>
+      </div>
+      <div class="core-values-grid">
+        <!-- Value 1: Excellence -->
+        <div class="core-value-card fade-in">
+          <div class="core-value-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <h3>Excellence</h3>
+          <p>We set the highest standards in academics, character, and service — never settling for less than our best.</p>
+        </div>
+        <!-- Value 2: Discipline -->
+        <div class="core-value-card fade-in">
+          <div class="core-value-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1L3 5v6c0 5.25 3.83 10.15 9 11 5.17-.85 9-5.75 9-11V5l-9-4z"></path>
+            </svg>
+          </div>
+          <h3>Discipline</h3>
+          <p>Self‑control, respect, and responsibility form the backbone of our school culture.</p>
+        </div>
+        <!-- Value 3: Integrity -->
+        <div class="core-value-card fade-in">
+          <div class="core-value-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h3>Integrity</h3>
+          <p>We value honesty, transparency, and doing the right thing — even when no one is watching.</p>
+        </div>
+        <!-- Value 4: Leadership -->
+        <div class="core-value-card fade-in">
+          <div class="core-value-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Leadership</h3>
+          <p>Every student is nurtured to lead with empathy, vision, and a commitment to positive change.</p>
+        </div>
+        <!-- Value 5: Innovation -->
+        <div class="core-value-card fade-in">
+          <div class="core-value-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3>Innovation</h3>
+          <p>We embrace creativity, critical thinking, and modern technology to prepare students for the future.</p>
+        </div>
+        <!-- Value 6: Respect -->
+        <div class="core-value-card fade-in">
+          <div class="core-value-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3>Respect</h3>
+          <p>A community built on mutual respect — for oneself, for others, and for the world around us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PRINCIPAL'S MESSAGE – Modernized Premium Section
+       ============================================ -->
+  <section class="section principals-modern" id="principals-message">
+    <div class="container">
+      <div class="principals-grid-modern">
+        <!-- Left Column: Large Principal Image -->
+        <div class="principals-image-col fade-in">
+          <div class="principal-image-frame">
+            <div class="principal-image-shape"></div>
+            <img
+              src="image/Gemini_Generated_Image_hla1sxhla1sxhla1.png"
+              alt="Dr. Emmanuel C. Okonkwo, Principal of Bright International Secondary School"
+              loading="lazy"
+            >
+          </div>
+          <!-- Decorative Badge under image -->
+          <div class="principal-badge-premium">
+            <span class="badge-line"></span>
+            <span class="badge-text">Principal</span>
+            <span class="badge-line"></span>
+          </div>
+        </div>
+
+        <!-- Right Column: Message Content -->
+        <div class="principals-text-col fade-in">
+          <div class="principals-message-card">
+            <!-- Large Decorative Quote Icon -->
+            <div class="quote-icon" aria-hidden="true">
+              <svg width="52" height="42" viewBox="0 0 52 42" fill="none">
+                <path d="M0 42V23.2C0 16.5333 1.6 11.2667 4.8 7.4C8.13333 3.4 12.6667 0.666667 18.4 0L20.8 4.8C15.8667 7.86667 12.4 12.1333 10.4 17.6H22V42H0ZM30 42V23.2C30 16.5333 31.6 11.2667 34.8 7.4C38.1333 3.4 42.6667 0.666667 48.4 0L50.8 4.8C45.8667 7.86667 42.4 12.1333 40.4 17.6H52V42H30Z" fill="currentColor"/>
+              </svg>
+            </div>
+
+            <span class="section-label">A Message From</span>
+            <h2 class="principals-heading-modern">Our Principal</h2>
+
+            <div class="principals-message-text-modern">
+              <p>
+                At Bright International Secondary School, we nurture excellence, discipline, and character in every student.
+              </p>
+              <p>
+                Our world‑class learning environment empowers young minds to think critically, lead confidently, and grow holistically — building future‑ready leaders grounded in integrity and compassion.
+              </p>
+            </div>
+
+            <!-- Signature Block -->
+            <div class="principals-signature-modern">
+              <div class="sig-line"></div>
+              <span class="principal-name">Dr. Emmanuel C. Okonkwo</span>
+              <span class="principal-title">Principal, Bright International Secondary School</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- School Timeline Section -->
+  <section class="section timeline-section" id="timeline">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Our Journey</span>
+        <h2 class="section-title">School Timeline</h2>
+        <p class="section-desc">Milestones that have shaped Bright International Secondary School into a centre of excellence.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Milestone 1: Founded -->
+        <div class="timeline-item left fade-in">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2005</span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-badge">Founded</div>
+            <h3>School Founded</h3>
+            <p>Bright International Secondary School opened its doors in Mbieri Mbitaolu with a vision to provide world‑class secondary education rooted in discipline and excellence.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 2: Facilities Expansion -->
+        <div class="timeline-item right fade-in">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2010</span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-badge">Growth</div>
+            <h3>Facilities Expansion</h3>
+            <p>Major infrastructure upgrades — new science laboratories, a modern library, and expanded classroom blocks — were completed to accommodate our growing student body.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 3: Academic Achievement -->
+        <div class="timeline-item left fade-in">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2014</span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-badge">Achievement</div>
+            <h3>Best WAEC Results in the Region</h3>
+            <p>Our students achieved the highest WAEC performance in the local government area, with a 95% credit pass rate across all core subjects.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 4: Digital Learning -->
+        <div class="timeline-item right fade-in">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2018</span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-badge">Innovation</div>
+            <h3>Digital Learning Initiative</h3>
+            <p>Launched a fully equipped ICT centre and introduced e‑learning resources, preparing students for a technology‑driven future.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 5: Award -->
+        <div class="timeline-item left fade-in">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2022</span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-badge">Recognition</div>
+            <h3>State Education Excellence Award</h3>
+            <p>Recognised by the Imo State Ministry of Education for outstanding contribution to secondary education and student development.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 6: Recent Growth -->
+        <div class="timeline-item right fade-in">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2025</span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-badge">Modernisation</div>
+            <h3>Campus Modernisation</h3>
+            <p>Ongoing investments in smart classrooms, enhanced sports facilities, and a new multipurpose hall to enrich student life and learning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Carousel Section -->
+  <section class="section testimonials-carousel-section" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Our Community</span>
+        <h2 class="section-title">What Parents &amp; Students Say</h2>
+        <p class="section-desc">Real experiences from the Bright International family.</p>
+      </div>
+
+      <div class="carousel-wrapper" id="testimonialCarousel">
+        <!-- Slides Container -->
+        <div class="carousel-slides">
+          <!-- Slide 1 -->
+          <div class="carousel-slide active">
+            <div class="testimonial-card-carousel">
+              <div class="testimonial-quote">&#8220;</div>
+              <div class="testimonial-stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testimonial-text">BRIGHT INTERNATIONAL SECONDARY SCHOOL changed my son’s life. His confidence, discipline, and academic performance improved tremendously.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">MP</div>
+                <div class="testimonial-name">Mrs. Mercy Peters</div>
+                <div class="testimonial-role">Parent</div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-slide">
+            <div class="testimonial-card-carousel">
+              <div class="testimonial-quote">&#8220;</div>
+              <div class="testimonial-stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testimonial-text">The teachers here genuinely care about our success. I’ve grown academically and personally, and I now believe I can achieve anything.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">CA</div>
+                <div class="testimonial-name">Chidinma A.</div>
+                <div class="testimonial-role">SS3 Student</div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-slide">
+            <div class="testimonial-card-carousel">
+              <div class="testimonial-quote">&#8220;</div>
+              <div class="testimonial-stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testimonial-text">I appreciate the disciplined and nurturing environment. My daughter now excels not just academically, but in character and leadership.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">DO</div>
+                <div class="testimonial-name">Dr. Obi Okafor</div>
+                <div class="testimonial-role">Parent &amp; Medical Doctor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow carousel-prev" aria-label="Previous testimonial">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="carousel-arrow carousel-next" aria-label="Next testimonial">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <!-- Dot Indicators -->
+        <div class="carousel-dots" id="carouselDots">
+          <span class="carousel-dot active" data-slide="0"></span>
+          <span class="carousel-dot" data-slide="1"></span>
+          <span class="carousel-dot" data-slide="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-content fade-in">
+        <h2>Join the Bright International Family</h2>
+        <p>Experience education that transforms lives. Enroll your child today.</p>
+        <a href="admission.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Start Enrollment
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Bright International Secondary School</h3>
+        <p>Nurturing future leaders through quality education, character development, and extracurricular excellence since 2005.</p>
+        <div class="footer-address">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Mbieri Mbitaolu, Imo State, Nigeria
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="admission.html">Admission</a>
+        <a href="login.html">Student Portal</a>
+        <a href="login.html">Teacher Portal</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <p>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          info@brightinternationalschool.edu.ng
+        </p>
+        <p>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +234 803 123 4567
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Bright International Secondary School. All rights reserved.</p>
+      <p>Designed with excellence in mind.</p>
+    </div>
+  </footer>
+
+  <!-- <script src="js/script.js"></script> -->
+
+  
+      <!-- Premium Scroll‑to‑Top Button -->
+    <div class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+      <svg
+        class="scroll-chevron"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </div>
+    <script src="js/script.js"></script>
+
+
+    <!-- ============ CHATBOT WIDGET (Phase 1) ============ -->
+<div id="chatbot-widget">
+  <!-- Floating Action Button -->
+  <button
+    id="chatbot-toggle"
+    class="chatbot-toggle"
+    aria-label="Open chat with Bright International"
+    aria-expanded="false"
+  >
+<svg
+  class="chatbot-toggle-icon"
+  width="28"
+  height="28"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  <!-- Antenna -->
+  <line x1="12" y1="1" x2="12" y2="5" />
+  <circle cx="12" cy="1" r="1.2" fill="currentColor" stroke="none" />
+  <!-- Head -->
+  <rect x="3" y="5" width="18" height="13" rx="4" />
+  <!-- Gear (left ear area) -->
+  <circle cx="2.5" cy="12" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none" />
+  <circle cx="2.5" cy="12" r="1" fill="currentColor" stroke="none" />
+  <!-- Eyes (friendly, open expression) -->
+  <circle cx="8.5" cy="10.5" r="1.8" />
+  <circle cx="15.5" cy="10.5" r="1.8" />
+  <circle cx="8.5" cy="10.5" r="0.9" fill="currentColor" stroke="none" />
+  <circle cx="15.5" cy="10.5" r="0.9" fill="currentColor" stroke="none" />
+  <!-- Mouth (open, friendly smile) -->
+  <path d="M9 15 Q12 18 15 15" />
+  <path d="M9 15 Q12 16 15 15" fill="currentColor" stroke="none" opacity="0.4" />
+  <!-- Inner mouth colour (optional, using fill) -->
+</svg>
+  </button>
+
+  <!-- Chat Window -->
+  <div
+    id="chatbot-window"
+    class="chatbot-window"
+    role="dialog"
+    aria-labelledby="chatbot-heading"
+    aria-hidden="true"
+  >
+    <div class="chatbot-header">
+      <div class="chatbot-header-title">
+        <div class="chatbot-logo">BI</div>
+        <h3 id="chatbot-heading">Bright International Chat</h3>
+      </div>
+      <button
+        class="chatbot-close"
+        aria-label="Close chat"
+        id="chatbot-close"
+      >&times;</button>
+    </div>
+
+    <div class="chatbot-body">
+      <div
+        class="chatbot-messages"
+        id="chatbot-messages"
+        role="log"
+        aria-live="polite"
+        aria-relevant="additions"
+      ></div>
+    </div>
+
+    <div class="chatbot-footer">
+      <input
+        type="text"
+        id="chatbot-input"
+        class="chatbot-input"
+        placeholder="Type your message…"
+        aria-label="Type your message"
+        autocomplete="off"
+      />
+      <button
+        id="chatbot-send"
+        class="chatbot-send-btn"
+        aria-label="Send message"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

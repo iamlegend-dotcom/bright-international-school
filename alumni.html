@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright International Secondary School | Home</title>
+    <meta
+      name="description"
+      content="Bright International Secondary School - Excellence in Education. Located in Mbieri Mbitaolu, Imo State, Nigeria."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- DARK MODE FLASH PREVENTION -->
+    <script>
+      (function() {
+        const saved = localStorage.getItem('bright_theme');
+        if (saved === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <!-- Premium Preloader -->
+    <!-- <div id="preloader">
+      <div class="preloader-content">
+        <div class="preloader-spinner"></div>
+        <div class="preloader-monogram">BISS</div>
+        <div class="preloader-sub">Loading…</div>
+      </div>
+    </div> -->
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">BI</div>
+          <div class="logo-text">
+            BRIGHT INTERNATIONAL
+            <span>Secondary School</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="alumni.html" class="active">Alumni</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+          <!-- DARK MODE TOGGLE -->
+          <li class="theme-toggle-item">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch to dark mode" aria-pressed="false">
+              <!-- Sun icon (default light mode) -->
+              <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <!-- Moon icon (hidden by default) -->
+              <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+          </li>
+          <li><a href="admission.html" class="nav-cta">Enroll Now</a></li>
+        </ul>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+
+  <!-- ============================================
+       ALUMNI HERO
+       ============================================ -->
+  <header class="page-header about-hero alumni-hero"
+          style="background-image: url('https://images.unsplash.com/photo-1526948128573-703ee1c9fede?w=1200&q=80');">
+    <div class="hero-overlay-about"></div>
+    <div class="about-hero-content fade-in">
+      <h1>Our Legacy Lives Through Our Alumni</h1>
+      <p class="hero-subtitle">
+        From our classrooms to universities, hospitals, boardrooms, and leadership positions around the world – our alumni continue to make us proud.
+      </p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Alumni</span>
+      </div>
+      <div class="hero-cta-group">
+        <a href="#reconnect" class="btn btn-primary">Join Alumni Network</a>
+        <a href="#share-story" class="btn btn-secondary alumni-btn-share">Share Your Story</a>
+      </div>
+    </div>
+    <div class="about-hero-wave">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,0 C480,90 960,30 1440,70 L1440,100 L0,100 Z" fill="currentColor"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ============================================
+       WELCOME BACK ALUMNI
+       ============================================ -->
+  <section class="section alumni-welcome">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Welcome Home</span>
+        <h2 class="section-title">You Will Always Be Part of Our Story</h2>
+        <p class="section-desc">
+          No matter where life has taken you, Bright International Secondary School will always be part of your story. You are our greatest achievement.
+        </p>
+      </div>
+      <div class="welcome-text fade-in">
+        <p>
+          We celebrate every student who has walked through our gates. The values, friendships, and lessons you gained here have shaped you into the leader you are today – and we couldn’t be prouder.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       DISTINGUISHED ALUMNI SHOWCASE
+       ============================================ -->
+  <section class="section alumni-showcase">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Our Pride</span>
+        <h2 class="section-title">Distinguished Alumni</h2>
+        <p class="section-desc">
+          Meet some of our outstanding graduates who are making a difference across industries.
+        </p>
+      </div>
+
+      <div class="showcase-grid">
+        <div class="showcase-card fade-in">
+          <div class="showcase-photo">
+            <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=400&h=400&fit=crop" alt="Dr. Jonathan Victory" loading="lazy">
+          </div>
+          <h3>Dr. Jonathan Victory</h3>
+          <span class="showcase-year">Class of 2015</span>
+          <span class="showcase-profession">Medical Doctor</span>
+          <p class="showcase-quote">"Bright International helped shape my discipline, confidence, and commitment to excellence."</p>
+        </div>
+        <div class="showcase-card fade-in">
+          <div class="showcase-photo">
+            <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=400&h=400&fit=crop" alt="Ogbonna Glory Chukwuebuka" loading="lazy">
+          </div>
+          <h3>Ogbonna Glory Chukwuebuka</h3>
+          <span class="showcase-year">Class of 2015</span>
+          <span class="showcase-profession">Software Engineer</span>
+          <p class="showcase-quote">"The problem‑solving skills I developed at Bright set the foundation for my tech career."</p>
+        </div>
+        <div class="showcase-card fade-in">
+          <div class="showcase-photo">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Emeka Nwosu" loading="lazy">
+          </div>
+          <h3>Emeka Nwosu</h3>
+          <span class="showcase-year">Class of 2009</span>
+          <span class="showcase-profession">Pilot</span>
+          <p class="showcase-quote">"Dreaming of the skies started in the science lab at Bright. Now I fly across continents."</p>
+        </div>
+        <div class="showcase-card fade-in">
+          <div class="showcase-photo">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop" alt="Ngozi Eze" loading="lazy">
+          </div>
+          <h3>Ngozi Eze</h3>
+          <span class="showcase-year">Class of 2014</span>
+          <span class="showcase-profession">Journalist</span>
+          <p class="showcase-quote">"Bright taught me to communicate with clarity and integrity – two pillars of good journalism."</p>
+        </div>
+        <div class="showcase-card fade-in">
+          <div class="showcase-photo">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=400&h=400&fit=crop" alt="Tunde Bakare" loading="lazy">
+          </div>
+          <h3>Tunde Bakare</h3>
+          <span class="showcase-year">Class of 2010</span>
+          <span class="showcase-profession">Entrepreneur</span>
+          <p class="showcase-quote">"The entrepreneurial spirit was ignited during our school’s annual business fair."</p>
+        </div>
+        <div class="showcase-card fade-in">
+          <div class="showcase-photo">
+            <img src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=400&h=400&fit=crop" alt="Fatima Ibrahim" loading="lazy">
+          </div>
+          <h3>Fatima Ibrahim</h3>
+          <span class="showcase-year">Class of 2013</span>
+          <span class="showcase-profession">Human Rights Lawyer</span>
+          <p class="showcase-quote">"My passion for justice was nurtured in the debate club and moral guidance at Bright."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       THEN & NOW SUCCESS STORIES
+       ============================================ -->
+  <section class="section then-now-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Then &amp; Now</span>
+        <h2 class="section-title">From Students to Leaders</h2>
+        <p class="section-desc">
+          We love to see how far our graduates have come. Every journey started right here.
+        </p>
+      </div>
+      <div class="then-now-grid">
+        <div class="then-now-item fade-in">
+          <div class="then-photo">
+            <img src="https://images.unsplash.com/photo-1580894732930-0e9c2c4b4e6b?w=300&h=300&fit=crop" alt="Student years" loading="lazy">
+            <span class="photo-label">Then</span>
+          </div>
+          <div class="then-arrow">→</div>
+          <div class="now-photo">
+            <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=300&h=300&fit=crop" alt="Professional today" loading="lazy">
+            <span class="photo-label">Now</span>
+          </div>
+        </div>
+        <div class="then-now-item fade-in">
+          <div class="then-photo">
+            <img src="https://images.unsplash.com/photo-1526948128573-703ee1c9fede?w=300&h=300&fit=crop" alt="Student years" loading="lazy">
+            <span class="photo-label">Then</span>
+          </div>
+          <div class="then-arrow">→</div>
+          <div class="now-photo">
+            <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=300&h=300&fit=crop" alt="Professional today" loading="lazy">
+            <span class="photo-label">Now</span>
+          </div>
+        </div>
+        <div class="then-now-item fade-in">
+          <div class="then-photo">
+            <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=300&h=300&fit=crop" alt="Student years" loading="lazy">
+            <span class="photo-label">Then</span>
+          </div>
+          <div class="then-arrow">→</div>
+          <div class="now-photo">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop" alt="Professional today" loading="lazy">
+            <span class="photo-label">Now</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MEMORY WALL – Premium Timeline Layout
+       ============================================ -->
+  <section class="section memory-wall">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Memory Lane</span>
+        <h2 class="section-title">Moments We Cherish</h2>
+        <p class="section-desc">
+          Revisit the memories that shaped our community – from classrooms to sports fields.
+        </p>
+      </div>
+
+      <div class="memory-timeline">
+        <!-- 1 -->
+        <div class="memory-item left fade-in">
+          <div class="memory-marker">
+            <div class="memory-dot"></div>
+            <span class="memory-year">📸</span>
+          </div>
+          <div class="memory-card">
+            <img src="image/2k25.png" alt="Classroom memories" loading="lazy">
+            <p>Classroom Moments</p>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="memory-item right fade-in">
+          <div class="memory-marker">
+            <div class="memory-dot"></div>
+            <span class="memory-year">📚</span>
+          </div>
+          <div class="memory-card">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop" alt="Group study" loading="lazy">
+            <p>Group Study Sessions</p>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="memory-item left fade-in">
+          <div class="memory-marker">
+            <div class="memory-dot"></div>
+            <span class="memory-year">📖</span>
+          </div>
+          <div class="memory-card">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&h=400&fit=crop" alt="Library" loading="lazy">
+            <p>Library & Research</p>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="memory-item right fade-in">
+          <div class="memory-marker">
+            <div class="memory-dot"></div>
+            <span class="memory-year">⚽</span>
+          </div>
+          <div class="memory-card">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop" alt="Sports day" loading="lazy">
+            <p>Sports Days</p>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="memory-item left fade-in">
+          <div class="memory-marker">
+            <div class="memory-dot"></div>
+            <span class="memory-year">🎭</span>
+          </div>
+          <div class="memory-card">
+            <img src="https://images.unsplash.com/photo-1532635241-17e820acc59f?w=600&h=400&fit=crop" alt="Cultural day" loading="lazy">
+            <p>Cultural Celebrations</p>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="memory-item right fade-in">
+          <div class="memory-marker">
+            <div class="memory-dot"></div>
+            <span class="memory-year">🎓</span>
+          </div>
+          <div class="memory-card">
+            <img src="image/graduation.png" alt="Graduation" loading="lazy">
+            <p>Graduation Ceremonies</p>
+          </div>
+        </div>
+        <!-- 7 -->
+        <div class="memory-item left fade-in">
+          <div class="memory-marker">
+            <div class="memory-dot"></div>
+            <span class="memory-year">🔬</span>
+          </div>
+          <div class="memory-card">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop" alt="Science lab" loading="lazy">
+            <p>Science Lab Work</p>
+          </div>
+        </div>
+        <!-- 8 -->
+        <div class="memory-item right fade-in">
+          <div class="memory-marker">
+            <div class="memory-dot"></div>
+            <span class="memory-year">🤝</span>
+          </div>
+          <div class="memory-card">
+            <img src="image/together.png" alt="Students collaborating" loading="lazy">
+            <p>Friendship & Collaboration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ALUMNI IMPACT STATISTICS
+       ============================================ -->
+  <section class="section alumni-stats">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Our Impact</span>
+        <h2 class="section-title">Alumni by the Numbers</h2>
+        <p class="section-desc">
+          Two decades of educational excellence, reflected in the lives we've shaped.
+        </p>
+      </div>
+      <div class="alumni-stats-grid">
+        <div class="alumni-stat-item fade-in">
+          <div class="alumni-stat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 4 6 4s6-2 6-4v-5"/></svg>
+          </div>
+          <div class="stat-number" data-target="1200">0</div>
+          <div class="stat-label">Total Graduates</div>
+        </div>
+        <div class="alumni-stat-item fade-in">
+          <div class="alumni-stat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="stat-number" data-target="85" data-suffix="%">0</div>
+          <div class="stat-label">University Progression</div>
+        </div>
+        <div class="alumni-stat-item fade-in">
+          <div class="alumni-stat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="stat-number" data-target="20">0</div>
+          <div class="stat-label">Countries Represented</div>
+        </div>
+        <div class="alumni-stat-item fade-in">
+          <div class="alumni-stat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="stat-number" data-target="18" data-suffix="+">0</div>
+          <div class="stat-label">Years of Legacy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ALUMNI TESTIMONIALS CAROUSEL
+       ============================================ -->
+  <section class="section alumni-carousel-section" id="alumniCarouselSection">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">In Their Words</span>
+        <h2 class="section-title">Alumni Testimonials</h2>
+      </div>
+      <div class="alumni-carousel" id="alumniTestimonialCarousel">
+        <div class="carousel-slides">
+          <div class="carousel-slide active">
+            <div class="testimonial-alumni-card">
+              <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=200&h=200&fit=crop" alt="Alumni photo" class="testimonial-avatar-img">
+              <p class="testimonial-text">"Bright International gave me the discipline and confidence to excel in medical school. I will forever be grateful."</p>
+              <div class="testimonial-author">
+                <span class="name">Dr. Chinedu Okafor</span>
+                <span class="year">Class of 2012</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="testimonial-alumni-card">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop" alt="Alumni photo" class="testimonial-avatar-img">
+              <p class="testimonial-text">"The critical thinking skills I learned at Bright have been instrumental in my software engineering career."</p>
+              <div class="testimonial-author">
+                <span class="name">Aisha Mohammed</span>
+                <span class="year">Class of 2011</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="testimonial-alumni-card">
+              <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=200&h=200&fit=crop" alt="Alumni photo" class="testimonial-avatar-img">
+              <p class="testimonial-text">"From the classrooms of Bright to the cockpit of an airplane – the journey has been incredible."</p>
+              <div class="testimonial-author">
+                <span class="name">Emeka Nwosu</span>
+                <span class="year">Class of 2009</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-arrow carousel-prev" aria-label="Previous"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button class="carousel-arrow carousel-next" aria-label="Next"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></button>
+        <div class="carousel-dots">
+          <span class="carousel-dot active" data-slide="0"></span>
+          <span class="carousel-dot" data-slide="1"></span>
+          <span class="carousel-dot" data-slide="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       RECONNECT CTA
+       ============================================ -->
+  <section class="section reconnect-section" id="reconnect">
+    <div class="container">
+      <div class="cta-content fade-in">
+        <h2>Reconnect with Your Bright Family</h2>
+        <p>
+          Join the alumni network, attend reunions, mentor current students, and keep the Bright legacy alive.
+        </p>
+        <a href="contact.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          Join the Alumni Network
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Bright International Secondary School</h3>
+        <p>Nurturing future leaders through quality education, character development, and extracurricular excellence since 2005.</p>
+        <div class="footer-address">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Mbieri Mbitaolu, Imo State, Nigeria
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="admission.html">Admission</a>
+        <a href="login.html">Student Portal</a>
+        <a href="login.html">Teacher Portal</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <p>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          info@brightinternationalschool.edu.ng
+        </p>
+        <p>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +234 803 123 4567
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Bright International Secondary School. All rights reserved.</p>
+      <p>Designed with excellence in mind.</p>
+    </div>
+  </footer>
+
+  <!-- <script src="js/script.js?v=5"></script> -->
+
+        <!-- Premium Scroll‑to‑Top Button -->
+    <div class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+      <svg
+        class="scroll-chevron"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </div>
+    <script src="js/script.js"></script>
+
+
+    <!-- ============ CHATBOT WIDGET (Phase 1) ============ -->
+<div id="chatbot-widget">
+  <!-- Floating Action Button -->
+  <button
+    id="chatbot-toggle"
+    class="chatbot-toggle"
+    aria-label="Open chat with Bright International"
+    aria-expanded="false"
+  >
+<svg
+  class="chatbot-toggle-icon"
+  width="28"
+  height="28"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  <!-- Antenna -->
+  <line x1="12" y1="1" x2="12" y2="5" />
+  <circle cx="12" cy="1" r="1.2" fill="currentColor" stroke="none" />
+  <!-- Head -->
+  <rect x="3" y="5" width="18" height="13" rx="4" />
+  <!-- Gear (left ear area) -->
+  <circle cx="2.5" cy="12" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none" />
+  <circle cx="2.5" cy="12" r="1" fill="currentColor" stroke="none" />
+  <!-- Eyes (friendly, open expression) -->
+  <circle cx="8.5" cy="10.5" r="1.8" />
+  <circle cx="15.5" cy="10.5" r="1.8" />
+  <circle cx="8.5" cy="10.5" r="0.9" fill="currentColor" stroke="none" />
+  <circle cx="15.5" cy="10.5" r="0.9" fill="currentColor" stroke="none" />
+  <!-- Mouth (open, friendly smile) -->
+  <path d="M9 15 Q12 18 15 15" />
+  <path d="M9 15 Q12 16 15 15" fill="currentColor" stroke="none" opacity="0.4" />
+  <!-- Inner mouth colour (optional, using fill) -->
+</svg>
+  </button>
+
+  <!-- Chat Window -->
+  <div
+    id="chatbot-window"
+    class="chatbot-window"
+    role="dialog"
+    aria-labelledby="chatbot-heading"
+    aria-hidden="true"
+  >
+    <div class="chatbot-header">
+      <div class="chatbot-header-title">
+        <div class="chatbot-logo">BI</div>
+        <h3 id="chatbot-heading">Bright International Chat</h3>
+      </div>
+      <button
+        class="chatbot-close"
+        aria-label="Close chat"
+        id="chatbot-close"
+      >&times;</button>
+    </div>
+
+    <div class="chatbot-body">
+      <div
+        class="chatbot-messages"
+        id="chatbot-messages"
+        role="log"
+        aria-live="polite"
+        aria-relevant="additions"
+      ></div>
+    </div>
+
+    <div class="chatbot-footer">
+      <input
+        type="text"
+        id="chatbot-input"
+        class="chatbot-input"
+        placeholder="Type your message…"
+        aria-label="Type your message"
+        autocomplete="off"
+      />
+      <button
+        id="chatbot-send"
+        class="chatbot-send-btn"
+        aria-label="Send message"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

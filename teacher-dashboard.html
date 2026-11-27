@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Dashboard | Bright International Secondary School</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/teacher-dashboard.css">
+</head>
+<body class="teacher-dashboard-body">
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Sidebar -->
+  <aside class="teacher-sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">BI</div>
+      Bright International
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" class="active" data-section="dashboard">📊 Dashboard</a>
+      <a href="#" data-section="profile">👤 My Profile</a>
+      <a href="#" data-section="classes">📚 My Classes</a>
+      <a href="#" data-section="students">🎓 Students</a>
+      <a href="#" data-section="gradebook">📈 Gradebook</a>
+      <a href="#" data-section="timetable">📅 Timetable</a>
+      <a href="#" data-section="announcements">📢 Announcements</a>
+      <a href="#" data-section="assignments">📝 Assignments</a>
+      <a href="#" class="logout-link" id="logoutBtn">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Topbar -->
+  <header class="teacher-topbar" id="topbar">
+    <div class="topbar-left">
+      <button class="mobile-menu-btn" id="menuToggle">☰</button>
+      <div class="topbar-welcome">
+        <span class="topbar-title">Teacher Dashboard</span>
+        <span class="topbar-welcome-text">Welcome back, <strong id="topbarWelcomeName">Teacher</strong></span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-date" id="topbarDate">Thursday, June 4, 2026</div>
+<div class="notification-wrapper" id="notificationWrapper">
+<button class="notification-icon" id="notificationBtn" aria-label="Notifications">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+      <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+    </svg>
+    <span class="notification-badge" id="notificationBadge">2</span>
+  </button>
+
+  <div class="notification-dropdown" id="notificationDropdown" style="display: none;">
+    <div class="notification-dropdown-header">
+      <h4>Notifications</h4>
+    </div>
+    <div class="notification-list">
+      <!-- Upcoming classes based on Today's Schedule -->
+      <div class="notification-item unread">
+        <span class="notification-icon-small">📅</span>
+        <div class="notification-content">
+          <strong>Mathematics – JSS 1A</strong>
+          <span>Starting at 8:00 AM</span>
+          <small>Today</small>
+        </div>
+      </div>
+      <div class="notification-item unread">
+        <span class="notification-icon-small">📅</span>
+        <div class="notification-content">
+          <strong>Physics – SS 1 Science</strong>
+          <span>Starting at 10:00 AM</span>
+          <small>Today</small>
+        </div>
+      </div>
+      <!-- Recent activity matching the overview -->
+      <div class="notification-item">
+        <span class="notification-icon-small">📋</span>
+        <div class="notification-content">
+          <strong>Grades submitted</strong>
+          <span>Mathematics SS1 – Exam scores entered.</span>
+          <small>2 hours ago</small>
+        </div>
+      </div>
+    </div>
+    <button class="notification-mark-read" id="markReadBtn">
+      Mark all as read
+    </button>
+  </div>
+</div>
+      <div class="topbar-profile">
+        <div class="user-avatar" id="userAvatar">TE</div>
+        <div class="user-info">
+          <div class="user-name" id="displayName">Teacher Name</div>
+          <div class="user-role">Teacher</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="teacher-main" id="mainContent">
+
+<section class="dash-section active" id="section-dashboard">
+  <div class="teacher-overview-container">
+    
+    <!-- Welcome Hero -->
+    <div class="teacher-welcome-hero">
+      <div class="teacher-welcome-hero-bg"></div>
+      <div class="teacher-welcome-content">
+        <div>
+          <h1 class="teacher-welcome-greeting">Welcome Back, <span id="heroTeacherName">Teacher</span></h1>
+          <p class="teacher-welcome-message">Your teaching schedule, classes, and management tools are ready.</p>
+          <div class="teacher-welcome-date" id="currentDate"></div>
+        </div>
+        <div class="teacher-welcome-stats">
+          <div class="teacher-quick-stat"><span class="teacher-quick-stat-value">4</span><span class="teacher-quick-stat-label">Classes</span></div>
+          <div class="teacher-quick-stat"><span class="teacher-quick-stat-value">87</span><span class="teacher-quick-stat-label">Students</span></div>
+          <div class="teacher-quick-stat"><span class="teacher-quick-stat-value">5</span><span class="teacher-quick-stat-label">Pending</span></div>
+          <div class="teacher-quick-stat"><span class="teacher-quick-stat-value">6</span><span class="teacher-quick-stat-label">Posted</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="teacher-stats-grid">
+      <div class="teacher-stat-card">
+        <div class="teacher-card-icon">📚</div>
+        <div>
+          <div class="teacher-card-label">Total Classes</div>
+          <div class="teacher-card-value">4</div>
+        </div>
+      </div>
+      <div class="teacher-stat-card">
+        <div class="teacher-card-icon">👨‍🎓</div>
+        <div>
+          <div class="teacher-card-label">Total Students</div>
+          <div class="teacher-card-value">87</div>
+        </div>
+      </div>
+      <div class="teacher-stat-card">
+        <div class="teacher-card-icon">📝</div>
+        <div>
+          <div class="teacher-card-label">Assignments Pending</div>
+          <div class="teacher-card-value">5</div>
+        </div>
+      </div>
+      <div class="teacher-stat-card">
+        <div class="teacher-card-icon">📢</div>
+        <div>
+          <div class="teacher-card-label">Announcements</div>
+          <div class="teacher-card-value">6</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Today's Schedule & Recent Activities -->
+    <div class="teacher-section-row">
+      <div class="teacher-section-half">
+        <h3 class="teacher-section-heading">📅 Today's Schedule</h3>
+        <div class="teacher-schedule-item">
+          <span class="teacher-schedule-time">8:00 – 8:50</span>
+          <span>Mathematics</span>
+          <span class="teacher-schedule-class">JSS 1A</span>
+        </div>
+        <div class="teacher-schedule-item">
+          <span class="teacher-schedule-time">8:50 – 9:40</span>
+          <span>Mathematics</span>
+          <span class="teacher-schedule-class">JSS 2A</span>
+        </div>
+        <div class="teacher-schedule-item">
+          <span class="teacher-schedule-time">10:00 – 10:50</span>
+          <span>Physics</span>
+          <span class="teacher-schedule-class">SS 1 Science</span>
+        </div>
+        <div class="teacher-schedule-item">
+          <span class="teacher-schedule-time">10:50 – 11:40</span>
+          <span>Mathematics</span>
+          <span class="teacher-schedule-class">SS 2 Science</span>
+        </div>
+      </div>
+      <div class="teacher-section-half">
+        <h3 class="teacher-section-heading">🕐 Recent Activities</h3>
+        <div class="teacher-activity-item">
+          <div class="teacher-activity-dot"></div>
+          <div>
+            <div class="teacher-activity-date">Jun 4, 2026</div>
+            <div class="teacher-activity-title">Grades submitted</div>
+            <div class="teacher-activity-desc">Mathematics SS1 – Exam scores entered.</div>
+          </div>
+        </div>
+        <div class="teacher-activity-item">
+          <div class="teacher-activity-dot"></div>
+          <div>
+            <div class="teacher-activity-date">Jun 3, 2026</div>
+            <div class="teacher-activity-title">Attendance recorded</div>
+            <div class="teacher-activity-desc">JSS 2A attendance taken.</div>
+          </div>
+        </div>
+        <div class="teacher-activity-item">
+          <div class="teacher-activity-dot"></div>
+          <div>
+            <div class="teacher-activity-date">Jun 1, 2026</div>
+            <div class="teacher-activity-title">Announcement posted</div>
+            <div class="teacher-activity-desc">Exam schedule released.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- ========== MY PROFILE ========== -->
+    <section class="dash-section" id="section-profile">
+      <div class="profile-header-card">
+        <div class="profile-header-bg"></div>
+        <div class="profile-header-content">
+          <div class="profile-avatar-wrapper"><div class="profile-avatar-large" id="profileAvatarLarge">TE</div><div class="profile-status-badge">Active Teacher</div></div>
+          <div class="profile-header-details">
+            <h2 class="profile-full-name" id="profileFullName">Teacher Name</h2>
+            <div class="profile-meta-row">
+              <span class="profile-meta-item"><strong>Staff ID:</strong> <span id="profileStaffId">N/A</span></span>
+              <span class="profile-meta-item"><strong>Department:</strong> <span id="profileDepartment">Science</span></span>
+            </div>
+            <span class="profile-role-badge">Teacher</span>
+          </div>
+        </div>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-info-card">
+          <h3 class="card-heading">📋 Personal Information</h3>
+          <div class="info-grid">
+            <div class="info-item"><span class="info-label">Full Name</span><span class="info-value" id="infoFullName">N/A</span></div>
+            <div class="info-item"><span class="info-label">Staff ID</span><span class="info-value" id="infoStaffId">N/A</span></div>
+            <div class="info-item"><span class="info-label">Department</span><span class="info-value" id="infoDepartment">Science</span></div>
+            <div class="info-item"><span class="info-label">Subject Specialty</span><span class="info-value">Mathematics, Physics</span></div>
+            <div class="info-item"><span class="info-label">Role</span><span class="info-value">Teacher</span></div>
+            <div class="info-item"><span class="info-label">Employment Status</span><span class="info-value status-active">Active</span></div>
+          </div>
+        </div>
+        <div class="profile-academic-card">
+          <h3 class="card-heading">📊 Teaching Stats</h3>
+          <div class="snapshot-grid">
+            <div class="snapshot-stat"><span class="snapshot-value">4</span><span class="snapshot-label">Classes</span></div>
+            <div class="snapshot-stat"><span class="snapshot-value">87</span><span class="snapshot-label">Students</span></div>
+            <div class="snapshot-stat"><span class="snapshot-value">12</span><span class="snapshot-label">Lessons/Week</span></div>
+            <div class="snapshot-stat"><span class="snapshot-value">95%</span><span class="snapshot-label">Attendance Rate</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MY CLASSES ========== -->
+    <section class="dash-section" id="section-classes">
+      <h2 class="section-heading">My Classes</h2>
+      <div class="classes-grid">
+        <div class="class-card"><h3>JSS 1A</h3><p>Students: 22</p><p>Teacher: Mr. Okonkwo</p><div class="mini-progress"><div class="mini-progress-fill" style="width:85%"></div></div><span class="perf-badge good">Good</span></div>
+        <div class="class-card"><h3>JSS 2A</h3><p>Students: 20</p><p>Teacher: Mr. Okonkwo</p><div class="mini-progress"><div class="mini-progress-fill" style="width:78%"></div></div><span class="perf-badge good">Good</span></div>
+        <div class="class-card"><h3>SS 1 Science</h3><p>Students: 25</p><p>Teacher: Mr. Okonkwo</p><div class="mini-progress"><div class="mini-progress-fill" style="width:92%"></div></div><span class="perf-badge excellent">Excellent</span></div>
+        <div class="class-card"><h3>SS 2 Science</h3><p>Students: 20</p><p>Teacher: Mr. Okonkwo</p><div class="mini-progress"><div class="mini-progress-fill" style="width:88%"></div></div><span class="perf-badge excellent">Excellent</span></div>
+      </div>
+    </section>
+
+
+    <!-- ========== ASSIGNMENTS ========== -->
+<section class="dash-section" id="section-assignments">
+  <h2 class="section-heading">Post New Assignment</h2>
+
+  <div class="assignment-form-card">
+    <form id="assignmentForm">
+      <div class="form-group">
+        <label>Assignment Title</label>
+        <input type="text" class="form-control" placeholder="e.g., Mid‑Term Essay" required>
+      </div>
+      <div class="form-group">
+        <label>Class</label>
+        <select class="form-control">
+          <option>JSS 1A</option>
+          <option>JSS 2A</option>
+          <option>SS 1 Science</option>
+          <option>SS 2 Science</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Instructions</label>
+        <textarea class="form-control" rows="4" placeholder="Describe the assignment…"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Due Date</label>
+        <input type="date" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Attach File (front‑end only)</label>
+        <input type="file" class="form-control-file">
+      </div>
+      <button type="submit" class="btn btn-primary" id="assignmentSubmitBtn">
+        Post Assignment
+      </button>
+    </form>
+
+    <div id="assignmentSuccessMsg" style="display: none; margin-top: 16px;">
+      <div style="background: rgba(16,185,129,0.1); border: 1px solid #10b981; border-radius: 12px; padding: 16px; display: flex; gap: 12px; align-items: center;">
+        <span style="font-size: 2rem;">✓</span>
+        <div>
+          <strong style="color: #10b981;">Assignment Posted!</strong>
+          <p style="margin: 4px 0 0; color: var(--text-secondary);">Your assignment has been sent to the selected class. (Prototype – no actual upload)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Assignments (mock list) -->
+  <div style="margin-top: 40px;">
+    <h2 class="section-heading">Recent Assignments</h2>
+    <div class="assignment-list">
+      <div class="ann-card">
+        <div class="ann-card-header"><span class="ann-category category-academic">Academic</span><span class="ann-date">Jun 1</span></div>
+        <h4>Mid‑Term Essay</h4>
+        <p>JSS 2A – Due Jun 10</p>
+      </div>
+      <div class="ann-card">
+        <div class="ann-card-header"><span class="ann-category category-academic">Academic</span><span class="ann-date">May 25</span></div>
+        <h4>Physics Lab Report</h4>
+        <p>SS 1 Science – Due Jun 5</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- ========== STUDENTS ========== -->
+    <section class="dash-section" id="section-students">
+      <h2 class="section-heading">Students</h2>
+      <div class="students-filter-bar">
+        <input type="text" class="students-search" id="studentSearch" placeholder="Search by name or admission no…">
+        <select class="students-sort" id="studentSort">
+          <option value="name">Name</option>
+          <option value="class">Class</option>
+          <option value="attendance">Attendance</option>
+        </select>
+      </div>
+      <div class="students-grid" id="studentsGrid">
+        <!-- Cards will be generated by JS -->
+      </div>
+    </section>
+
+    <!-- ========== GRADEBOOK ========== -->
+    <section class="dash-section" id="section-gradebook">
+      <h2 class="section-heading">Gradebook</h2>
+      <div class="gradebook-grid">
+        <div class="gradebook-card">
+          <h3>Mathematics – JSS 1A</h3>
+          <table><thead><tr><th>Student</th><th>Test</th><th>Exam</th><th>Total</th><th>Grade</th></tr></thead>
+          <tbody>
+            <tr><td>Chidinma O.</td><td>82</td><td>78</td><td>80</td><td class="grade-a">A</td></tr>
+            <tr><td>Emeka N.</td><td>75</td><td>72</td><td>73</td><td class="grade-b">B</td></tr>
+            <tr><td>Amina B.</td><td>88</td><td>90</td><td>89</td><td class="grade-a">A</td></tr>
+          </tbody></table>
+        </div>
+        <div class="gradebook-card">
+          <h3>Physics – SS 1 Science</h3>
+          <table><thead><tr><th>Student</th><th>Test</th><th>Exam</th><th>Total</th><th>Grade</th></tr></thead>
+          <tbody>
+            <tr><td>David E.</td><td>60</td><td>55</td><td>57</td><td class="grade-c">C</td></tr>
+            <tr><td>Blessing I.</td><td>70</td><td>68</td><td>69</td><td class="grade-b">B</td></tr>
+            <tr><td>Tolu Y.</td><td>85</td><td>82</td><td>83</td><td class="grade-a">A</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TIMETABLE ========== -->
+    <section class="dash-section" id="section-timetable">
+      <h2 class="section-heading">Teaching Timetable</h2>
+      <div class="timetable-grid-teacher">
+        <div class="day-card" data-day="Monday">
+          <div class="day-header">Monday</div>
+          <div class="day-periods">
+            <div class="period-item"><span>8:00 – 8:50</span><span>Math (JSS1A)</span></div>
+            <div class="period-item"><span>8:50 – 9:40</span><span>Math (JSS2A)</span></div>
+            <div class="period-item"><span>10:00 – 10:50</span><span>Physics (SS1)</span></div>
+            <div class="period-item"><span>10:50 – 11:40</span><span>Math (SS2)</span></div>
+          </div>
+        </div>
+        <div class="day-card" data-day="Tuesday">
+          <div class="day-header">Tuesday</div>
+          <div class="day-periods">
+            <div class="period-item"><span>8:00 – 8:50</span><span>Math (JSS1A)</span></div>
+            <div class="period-item"><span>8:50 – 9:40</span><span>Physics (SS1)</span></div>
+            <div class="period-item"><span>10:00 – 10:50</span><span>Math (JSS2A)</span></div>
+          </div>
+        </div>
+        <div class="day-card" data-day="Wednesday">
+          <div class="day-header">Wednesday</div>
+          <div class="day-periods">
+            <div class="period-item"><span>8:00 – 8:50</span><span>Physics (SS1)</span></div>
+            <div class="period-item"><span>8:50 – 9:40</span><span>Math (SS2)</span></div>
+            <div class="period-item"><span>10:00 – 10:50</span><span>Math (JSS1A)</span></div>
+          </div>
+        </div>
+        <div class="day-card" data-day="Thursday">
+          <div class="day-header">Thursday</div>
+          <div class="day-periods">
+            <div class="period-item"><span>8:00 – 8:50</span><span>Math (JSS2A)</span></div>
+            <div class="period-item"><span>8:50 – 9:40</span><span>Math (SS2)</span></div>
+            <div class="period-item"><span>10:00 – 10:50</span><span>Physics (SS1)</span></div>
+          </div>
+        </div>
+        <div class="day-card" data-day="Friday">
+          <div class="day-header">Friday</div>
+          <div class="day-periods">
+            <div class="period-item"><span>8:00 – 8:50</span><span>Physics (SS1)</span></div>
+            <div class="period-item"><span>8:50 – 9:40</span><span>Math (JSS1A)</span></div>
+            <div class="period-item"><span>10:00 – 10:50</span><span>Math (JSS2A)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ANNOUNCEMENTS ========== -->
+    <section class="dash-section" id="section-announcements">
+      <h2 class="section-heading">Announcements</h2>
+      <div class="announcements-filter-bar">
+        <button class="ann-filter-btn active" data-filter="all">All</button>
+        <button class="ann-filter-btn" data-filter="Academic">Academic</button>
+        <button class="ann-filter-btn" data-filter="Administration">Administration</button>
+      </div>
+      <div class="announcements-list-modern" id="announcementsList">
+        <div class="ann-card" data-category="Academic">
+          <div class="ann-card-header"><span class="ann-category category-academic">Academic</span><span class="ann-date">Jun 1</span></div>
+          <h4>Exam Schedule</h4><p>End‑of‑term exams begin June 20th.</p>
+        </div>
+        <div class="ann-card" data-category="Administration">
+          <div class="ann-card-header"><span class="ann-category category-administration">Administration</span><span class="ann-date">May 28</span></div>
+          <h4>Mid‑Term Break</h4><p>June 5–7. Classes resume June 8.</p>
+        </div>
+        <div class="ann-card" data-category="Academic">
+          <div class="ann-card-header"><span class="ann-category category-academic">Academic</span><span class="ann-date">May 15</span></div>
+          <h4>Sports Day</h4><p>Inter‑house sports on Saturday, June 10.</p>
+        </div>
+      </div>
+      <div class="draft-announcement">
+        <h3>Create Draft</h3>
+        <textarea placeholder="Write your announcement…" class="draft-textarea"></textarea>
+        <button class="btn btn-primary">Save Draft</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/teacher-dashboard.js"></script>
+</body>
+</html>

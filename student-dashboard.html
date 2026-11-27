@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | Bright International Secondary School</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-body">
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Sidebar -->
+  <aside class="dashboard-sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">BI</div>
+      Bright International
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" class="active" data-section="dashboard">🏠 Dashboard</a>
+      <a href="#" data-section="profile">👤 My Profile</a>
+      <a href="#" data-section="subjects">📚 Subjects</a>
+      <a href="#" data-section="timetable">📅 Timetable</a>
+      <a href="#" data-section="results">📈 Results</a>
+      <a href="#" data-section="announcements">📢 Announcements</a>
+      <a href="#" data-section="assignments">📝 Assignments</a>
+      <a href="#" class="logout-link" id="logoutBtn">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Topbar (teacher‑style welcome + date) -->
+  <header class="dashboard-topbar" id="topbar">
+    <div class="topbar-left">
+      <button class="mobile-menu-btn" id="menuToggle">☰</button>
+      <div class="topbar-welcome">
+        <span class="topbar-title">Student Dashboard</span>
+        <span class="topbar-welcome-text">Welcome back, <strong id="topbarWelcomeName">Student</strong></span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-date" id="topbarDate"></div>
+      <div class="notification-wrapper" id="notificationWrapper">
+        <button class="notification-icon" id="notificationBtn" aria-label="Notifications">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          <span class="notification-badge" id="notificationBadge">3</span>
+        </button>
+
+        <div class="notification-dropdown" id="notificationDropdown" style="display: none;">
+          <div class="notification-dropdown-header">
+            <h4>Notifications</h4>
+          </div>
+          <div class="notification-list">
+            <div class="notification-item unread">
+              <span class="notification-icon-small">📢</span>
+              <div class="notification-content">
+                <strong>Exam Schedule Released</strong>
+                <span>End‑of‑term exams begin June 20th.</span>
+                <small>2 hours ago</small>
+              </div>
+            </div>
+            <div class="notification-item unread">
+              <span class="notification-icon-small">📋</span>
+              <div class="notification-content">
+                <strong>Assignment Graded</strong>
+                <span>Mathematics SS1 – Scores updated.</span>
+                <small>5 hours ago</small>
+              </div>
+            </div>
+            <div class="notification-item">
+              <span class="notification-icon-small">📅</span>
+              <div class="notification-content">
+                <strong>Mid‑Term Break</strong>
+                <span>June 5–7. Classes resume June 8.</span>
+                <small>1 day ago</small>
+              </div>
+            </div>
+            <div class="notification-item unread">
+              <span class="notification-icon-small">🏫</span>
+              <div class="notification-content">
+                <strong>School Resumption Notice</strong>
+                <span>All students are to resume on Monday, June 9th, 2027.</span>
+                <small>2 days ago</small>
+              </div>
+            </div>
+          </div>
+          <button class="notification-mark-read" id="markReadBtn">
+            Mark all as read
+          </button>
+        </div>
+      </div>
+      <div class="topbar-profile">
+        <div class="user-avatar" id="userAvatar">ST</div>
+        <div class="user-info">
+          <div class="user-name" id="displayName">Student Name</div>
+          <div class="user-role">Student</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT WRAPPER (FIXED) ===== -->
+  <main class="dashboard-main" id="mainContent">
+
+    <!-- Dashboard Overview (default) -->
+    <section class="dash-section active" id="section-dashboard">
+      <!-- ===== WELCOME HERO ===== -->
+      <div class="welcome-hero">
+        <div class="welcome-hero-bg"></div>
+        <div class="welcome-hero-content">
+          <div class="welcome-text-block">
+            <h1 class="welcome-greeting">Welcome Back, <span id="heroStudentName">Student</span> 👋</h1>
+            <p class="welcome-message">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”</p>
+            <div class="welcome-date" id="currentDate">Monday, June 3, 2025</div>
+          </div>
+          <div class="welcome-quick-stats">
+            <div class="quick-stat">
+              <span class="quick-stat-value">5</span>
+              <span class="quick-stat-label">Subjects</span>
+            </div>
+            <div class="quick-stat">
+              <span class="quick-stat-value">92%</span>
+              <span class="quick-stat-label">Attendance</span>
+            </div>
+            <div class="quick-stat">
+              <span class="quick-stat-value">3</span>
+              <span class="quick-stat-label">Exams</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== INSIGHT CARDS ===== -->
+      <div class="overview-cards">
+        <div class="overview-card card-subjects">
+          <div class="card-icon-wrapper">
+            <span class="card-icon">📚</span>
+          </div>
+          <div class="card-content">
+            <span class="card-label">Total Subjects</span>
+            <span class="card-value">5</span>
+            <span class="card-meta">Active this term</span>
+          </div>
+          <div class="card-accent"></div>
+        </div>
+
+        <div class="overview-card card-attendance">
+          <div class="card-icon-wrapper">
+            <span class="card-icon">📋</span>
+          </div>
+          <div class="card-content">
+            <span class="card-label">Attendance Rate</span>
+            <span class="card-value">92%</span>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width:92%"></div>
+            </div>
+            <span class="card-meta">+2% this month</span>
+          </div>
+          <div class="card-accent"></div>
+        </div>
+
+        <div class="overview-card card-exams">
+          <div class="card-icon-wrapper">
+            <span class="card-icon">📝</span>
+          </div>
+          <div class="card-content">
+            <span class="card-label">Upcoming Exams</span>
+            <span class="card-value">3</span>
+            <span class="card-meta">Next: Mathematics (Jun 10)</span>
+          </div>
+          <div class="card-accent"></div>
+        </div>
+
+        <div class="overview-card card-performance">
+          <div class="card-icon-wrapper">
+            <span class="card-icon">⭐</span>
+          </div>
+          <div class="card-content">
+            <span class="card-label">Academic Performance</span>
+            <span class="card-value">Good</span>
+            <span class="card-meta">Consistent improvement</span>
+          </div>
+          <div class="card-accent"></div>
+        </div>
+      </div>
+
+      <!-- ===== ACADEMIC INSIGHTS SECTION ===== -->
+      <div class="insights-section">
+        <h3 class="section-heading">Academic Insights</h3>
+        <div class="insights-grid">
+          <div class="insight-card">
+            <div class="insight-header">
+              <span>📈 Overall Progress</span>
+            </div>
+            <div class="progress-ring-wrapper">
+              <svg class="progress-ring" viewBox="0 0 100 100">
+                <circle class="progress-ring-bg" cx="50" cy="50" r="42"></circle>
+                <circle class="progress-ring-fill" cx="50" cy="50" r="42" style="stroke-dasharray: 264; stroke-dashoffset: 53;"></circle>
+              </svg>
+              <span class="progress-ring-value">80%</span>
+            </div>
+            <p class="insight-desc">You’re on track with most subjects</p>
+          </div>
+          <div class="insight-card">
+            <div class="insight-header">
+              <span>🧠 Strongest Subject</span>
+            </div>
+            <div class="insight-highlight">English</div>
+            <p class="insight-desc">85% average score</p>
+          </div>
+          <div class="insight-card">
+            <div class="insight-header">
+              <span>🎯 Focus Area</span>
+            </div>
+            <div class="insight-highlight">Physics</div>
+            <p class="insight-desc">60% – could use extra practice</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== ANNOUNCEMENTS PREVIEW + UPCOMING EVENTS ===== -->
+      <div class="section-row">
+        <div class="section-half">
+          <h3 class="section-heading">📢 Recent Announcements</h3>
+          <div class="announcement-preview">
+            <div class="announcement-item">
+              <div class="ann-date">Jun 1</div>
+              <div class="ann-content">
+                <strong>Exam Schedule Released</strong>
+                <p>End-of-term exams begin June 20th.</p>
+              </div>
+            </div>
+            <div class="announcement-item">
+              <div class="ann-date">May 28</div>
+              <div class="ann-content">
+                <strong>Mid-Term Break</strong>
+                <p>June 5–7. Classes resume June 8.</p>
+              </div>
+            </div>
+            <div class="announcement-item">
+              <div class="ann-date">May 15</div>
+              <div class="ann-content">
+                <strong>Sports Day</strong>
+                <p>Inter-house sports on Saturday, June 10.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-half">
+          <h3 class="section-heading">📅 Upcoming Events</h3>
+          <div class="events-preview">
+            <div class="event-item">
+              <div class="event-date">10 Jun</div>
+              <div class="event-details">
+                <strong>Mathematics Examination</strong>
+                <span>9:00 AM – 11:00 AM</span>
+              </div>
+            </div>
+            <div class="event-item">
+              <div class="event-date">12 Jun</div>
+              <div class="event-details">
+                <strong>English Examination</strong>
+                <span>9:00 AM – 11:00 AM</span>
+              </div>
+            </div>
+            <div class="event-item">
+              <div class="event-date">15 Jun</div>
+              <div class="event-details">
+                <strong>Physics Examination</strong>
+                <span>11:00 AM – 1:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section class="dash-section" id="section-profile">
+      <!-- Profile Header Card -->
+      <div class="profile-header-card">
+        <div class="profile-header-bg"></div>
+        <div class="profile-header-content">
+          <div class="profile-avatar-wrapper">
+            <div class="profile-avatar-large" id="profileAvatarLarge">ST</div>
+            <div class="profile-status-badge">Active Student</div>
+          </div>
+          <div class="profile-header-details">
+            <h2 class="profile-full-name" id="profileFullName">Student Name</h2>
+            <div class="profile-meta-row">
+              <span class="profile-meta-item"><strong>Admission No:</strong> <span id="profileAdmission">N/A</span></span>
+              <span class="profile-meta-item"><strong>Class:</strong> <span id="profileClass">JSS1</span></span>
+            </div>
+            <span class="profile-role-badge">Student</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two‑column grid for the remaining cards -->
+      <div class="profile-grid">
+        <!-- Student Information Card -->
+        <div class="profile-info-card">
+          <h3 class="card-heading">📋 Student Information</h3>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">Full Name</span>
+              <span class="info-value" id="infoFullName">N/A</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Admission Number</span>
+              <span class="info-value" id="infoAdmission">N/A</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Class</span>
+              <span class="info-value" id="infoClass">JSS1</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Department</span>
+              <span class="info-value" id="infoDepartment">Science</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Academic Session</span>
+              <span class="info-value">2024/2025</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Date Joined</span>
+              <span class="info-value">September 10, 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic Snapshot Card -->
+        <div class="profile-academic-card">
+          <h3 class="card-heading">📊 Academic Snapshot</h3>
+          <div class="snapshot-grid">
+            <div class="snapshot-stat">
+              <span class="snapshot-value">5</span>
+              <span class="snapshot-label">Total Subjects</span>
+            </div>
+            <div class="snapshot-stat">
+              <span class="snapshot-value">92%</span>
+              <span class="snapshot-label">Attendance Rate</span>
+            </div>
+            <div class="snapshot-stat">
+              <span class="snapshot-value">78%</span>
+              <span class="snapshot-label">Current Average</span>
+            </div>
+            <div class="snapshot-stat">
+              <span class="snapshot-value">Good</span>
+              <span class="snapshot-label">Performance Rating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Account Information Card -->
+        <div class="profile-account-card">
+          <h3 class="card-heading">🔐 Account Information</h3>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">Login Identifier</span>
+              <span class="info-value" id="accountIdentifier">N/A</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">User Role</span>
+              <span class="info-value" id="accountRole">Student</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Last Login</span>
+              <span class="info-value" id="accountLastLogin">N/A</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Account Status</span>
+              <span class="info-value status-active">Active</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Highlights Card -->
+        <div class="profile-highlights-card">
+          <h3 class="card-heading">✨ Quick Highlights</h3>
+          <div class="highlights-grid">
+            <div class="highlight-item">
+              <span class="highlight-icon">📈</span>
+              <span class="highlight-text">Academic Progress</span>
+              <span class="highlight-sub">On track</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🤝</span>
+              <span class="highlight-text">Participation</span>
+              <span class="highlight-sub">Active in 3 clubs</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📝</span>
+              <span class="highlight-text">Upcoming Exams</span>
+              <span class="highlight-sub">3 scheduled</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🏅</span>
+              <span class="highlight-text">Activities</span>
+              <span class="highlight-sub">Sports, Debate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Subjects -->
+<section class="dash-section" id="section-subjects">
+  <!-- Quick Filter -->
+  <div class="subjects-filter-bar">
+    <button class="filter-btn active" data-filter="all">All Subjects</button>
+    <button class="filter-btn" data-filter="core">Core Subjects</button>
+    <button class="filter-btn" data-filter="science">Science Subjects</button>
+    <button class="filter-btn" data-filter="arts">Arts & Social Sciences</button>
+  </div>
+
+  <!-- Subjects Grid -->
+  <div class="subjects-grid-modern" id="subjectsGrid">
+    <!-- Card 1: Mathematics -->
+    <div class="subject-card-premium" data-category="core" data-subject="mathematics">
+      <div class="card-inner">
+        <div class="card-icon-area">
+          <span class="subject-icon">📐</span>
+        </div>
+        <div class="card-body">
+          <h3 class="subject-title">Mathematics</h3>
+          <div class="teacher-info">
+            <div class="teacher-avatar">Mr. O</div>
+            <span class="teacher-name">Mr. Okonkwo</span>
+          </div>
+          <div class="progress-section">
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:78%"></div></div>
+            <span class="progress-text">78%</span>
+          </div>
+          <div class="meta-row">
+            <span class="attendance-badge">📋 92%</span>
+            <span class="performance-badge good">Good</span>
+          </div>
+          <span class="subject-status active">Active</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: English Language -->
+    <div class="subject-card-premium" data-category="core" data-subject="english">
+      <div class="card-inner">
+        <div class="card-icon-area">
+          <span class="subject-icon">📖</span>
+        </div>
+        <div class="card-body">
+          <h3 class="subject-title">English Language</h3>
+          <div class="teacher-info">
+            <div class="teacher-avatar">Mrs. A</div>
+            <span class="teacher-name">Mrs. Adeyemi</span>
+          </div>
+          <div class="progress-section">
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:85%"></div></div>
+            <span class="progress-text">85%</span>
+          </div>
+          <div class="meta-row">
+            <span class="attendance-badge">📋 96%</span>
+            <span class="performance-badge excellent">Excellent</span>
+          </div>
+          <span class="subject-status active">Active</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Physics -->
+    <div class="subject-card-premium" data-category="science" data-subject="physics">
+      <div class="card-inner">
+        <div class="card-icon-area">
+          <span class="subject-icon">⚛️</span>
+        </div>
+        <div class="card-body">
+          <h3 class="subject-title">Physics</h3>
+          <div class="teacher-info">
+            <div class="teacher-avatar">Mr. I</div>
+            <span class="teacher-name">Mr. Ibrahim</span>
+          </div>
+          <div class="progress-section">
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:60%"></div></div>
+            <span class="progress-text">60%</span>
+          </div>
+          <div class="meta-row">
+            <span class="attendance-badge">📋 88%</span>
+            <span class="performance-badge average">Average</span>
+          </div>
+          <span class="subject-status active">Active</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Chemistry -->
+    <div class="subject-card-premium" data-category="science" data-subject="chemistry">
+      <div class="card-inner">
+        <div class="card-icon-area">
+          <span class="subject-icon">🧪</span>
+        </div>
+        <div class="card-body">
+          <h3 class="subject-title">Chemistry</h3>
+          <div class="teacher-info">
+            <div class="teacher-avatar">Mrs. N</div>
+            <span class="teacher-name">Mrs. Nwosu</span>
+          </div>
+          <div class="progress-section">
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:72%"></div></div>
+            <span class="progress-text">72%</span>
+          </div>
+          <div class="meta-row">
+            <span class="attendance-badge">📋 90%</span>
+            <span class="performance-badge good">Good</span>
+          </div>
+          <span class="subject-status active">Active</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5: Biology -->
+    <div class="subject-card-premium" data-category="science" data-subject="biology">
+      <div class="card-inner">
+        <div class="card-icon-area">
+          <span class="subject-icon">🧬</span>
+        </div>
+        <div class="card-body">
+          <h3 class="subject-title">Biology</h3>
+          <div class="teacher-info">
+            <div class="teacher-avatar">Dr. E</div>
+            <span class="teacher-name">Dr. Eze</span>
+          </div>
+          <div class="progress-section">
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:68%"></div></div>
+            <span class="progress-text">68%</span>
+          </div>
+          <div class="meta-row">
+            <span class="attendance-badge">📋 87%</span>
+            <span class="performance-badge average">Average</span>
+          </div>
+          <span class="subject-status active">Active</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6: Civic Education -->
+    <div class="subject-card-premium" data-category="arts" data-subject="civic">
+      <div class="card-inner">
+        <div class="card-icon-area">
+          <span class="subject-icon">🏛️</span>
+        </div>
+        <div class="card-body">
+          <h3 class="subject-title">Civic Education</h3>
+          <div class="teacher-info">
+            <div class="teacher-avatar">Ms. C</div>
+            <span class="teacher-name">Ms. Chioma</span>
+          </div>
+          <div class="progress-section">
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:80%"></div></div>
+            <span class="progress-text">80%</span>
+          </div>
+          <div class="meta-row">
+            <span class="attendance-badge">📋 95%</span>
+            <span class="performance-badge good">Good</span>
+          </div>
+          <span class="subject-status active">Active</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7: Computer Science -->
+    <div class="subject-card-premium" data-category="science" data-subject="computer">
+      <div class="card-inner">
+        <div class="card-icon-area">
+          <span class="subject-icon">💻</span>
+        </div>
+        <div class="card-body">
+          <h3 class="subject-title">Computer Science</h3>
+          <div class="teacher-info">
+            <div class="teacher-avatar">Mr. K</div>
+            <span class="teacher-name">Mr. Kenneth</span>
+          </div>
+          <div class="progress-section">
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:75%"></div></div>
+            <span class="progress-text">75%</span>
+          </div>
+          <div class="meta-row">
+            <span class="attendance-badge">📋 93%</span>
+            <span class="performance-badge excellent">Excellent</span>
+          </div>
+          <span class="subject-status active">Active</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 8: Further Mathematics -->
+    <div class="subject-card-premium" data-category="science" data-subject="furthermath">
+      <div class="card-inner">
+        <div class="card-icon-area">
+          <span class="subject-icon">📊</span>
+        </div>
+        <div class="card-body">
+          <h3 class="subject-title">Further Mathematics</h3>
+          <div class="teacher-info">
+            <div class="teacher-avatar">Mr. O</div>
+            <span class="teacher-name">Mr. Okonkwo</span>
+          </div>
+          <div class="progress-section">
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:55%"></div></div>
+            <span class="progress-text">55%</span>
+          </div>
+          <div class="meta-row">
+            <span class="attendance-badge">📋 80%</span>
+            <span class="performance-badge average">Average</span>
+          </div>
+          <span class="subject-status active">Active</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Subject Detail Modal -->
+<div class="subject-modal" id="subjectModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-dialog">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <div class="modal-content" id="modalContent">
+      <!-- dynamically filled -->
+    </div>
+  </div>
+</div>
+
+    <!-- Timetable -->
+    <section class="dash-section" id="section-timetable">
+      <!-- Timetable Header -->
+      <div class="timetable-header">
+        <div class="header-left">
+          <h2 class="section-heading">Weekly Schedule</h2>
+          <span class="academic-session">2026/2027 • Third Term</span>
+        </div>
+        <div class="header-right">
+          <span class="current-day-badge" id="currentDayBadge">Monday</span>
+        </div>
+      </div>
+
+      <!-- Quick Statistics Cards -->
+      <div class="timetable-stats-row">
+        <div class="timetable-stat-card">
+          <span class="stat-icon">📅</span>
+          <div class="stat-info">
+            <span class="stat-value">25</span>
+            <span class="stat-label">Weekly Classes</span>
+          </div>
+        </div>
+        <div class="timetable-stat-card">
+          <span class="stat-icon">📌</span>
+          <div class="stat-info">
+            <span class="stat-value" id="todayClassesCount">5</span>
+            <span class="stat-label">Today's Classes</span>
+          </div>
+        </div>
+        <div class="timetable-stat-card">
+          <span class="stat-icon">✅</span>
+          <div class="stat-info">
+            <span class="stat-value">2</span>
+            <span class="stat-label">Completed</span>
+          </div>
+        </div>
+        <div class="timetable-stat-card">
+          <span class="stat-icon">⏳</span>
+          <div class="stat-info">
+            <span class="stat-value">3</span>
+            <span class="stat-label">Upcoming</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Today's Classes + Upcoming Widget -->
+      <div class="timetable-highlight-row">
+        <!-- Today's Classes Card -->
+        <div class="today-classes-card" id="todayClassesCard">
+          <h3 class="card-heading">📋 Today's Classes</h3>
+          <div class="today-class-list" id="todayClassList">
+            <!-- dynamically filled by JS -->
+          </div>
+        </div>
+
+        <!-- Upcoming Class Widget -->
+        <div class="upcoming-widget">
+          <h3 class="card-heading">🔜 Next Upcoming</h3>
+          <div class="upcoming-details" id="upcomingDetails">
+            <span class="upcoming-subject">Mathematics</span>
+            <span class="upcoming-time">10:00 – 10:50 AM</span>
+            <span class="upcoming-teacher">Mr. Okonkwo</span>
+            <span class="upcoming-room">Room 101</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weekly Timetable Grid -->
+      <div class="weekly-grid" id="weeklyGrid">
+        <!-- Monday -->
+        <div class="day-card" data-day="Monday">
+          <div class="day-header">
+            <span class="day-name">Monday</span>
+          </div>
+          <div class="day-periods">
+            <div class="period-item">
+              <span class="period-time">8:00 – 8:50</span>
+              <span class="period-subject subject-math">Mathematics</span>
+              <span class="period-teacher">Mr. Okonkwo</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">8:50 – 9:40</span>
+              <span class="period-subject subject-english">English</span>
+              <span class="period-teacher">Mrs. Adeyemi</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">10:00 – 10:50</span>
+              <span class="period-subject subject-physics">Physics</span>
+              <span class="period-teacher">Mr. Ibrahim</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">10:50 – 11:40</span>
+              <span class="period-subject subject-biology">Biology</span>
+              <span class="period-teacher">Dr. Eze</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">12:30 – 13:20</span>
+              <span class="period-subject subject-chemistry">Chemistry</span>
+              <span class="period-teacher">Mrs. Nwosu</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="day-card" data-day="Tuesday">
+          <div class="day-header">
+            <span class="day-name">Tuesday</span>
+          </div>
+          <div class="day-periods">
+            <div class="period-item">
+              <span class="period-time">8:00 – 8:50</span>
+              <span class="period-subject subject-english">English</span>
+              <span class="period-teacher">Mrs. Adeyemi</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">8:50 – 9:40</span>
+              <span class="period-subject subject-math">Mathematics</span>
+              <span class="period-teacher">Mr. Okonkwo</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">10:00 – 10:50</span>
+              <span class="period-subject subject-chemistry">Chemistry</span>
+              <span class="period-teacher">Mrs. Nwosu</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">10:50 – 11:40</span>
+              <span class="period-subject subject-physics">Physics</span>
+              <span class="period-teacher">Mr. Ibrahim</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">12:30 – 13:20</span>
+              <span class="period-subject subject-biology">Biology</span>
+              <span class="period-teacher">Dr. Eze</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wednesday -->
+        <div class="day-card" data-day="Wednesday">
+          <div class="day-header">
+            <span class="day-name">Wednesday</span>
+          </div>
+          <div class="day-periods">
+            <div class="period-item">
+              <span class="period-time">8:00 – 8:50</span>
+              <span class="period-subject subject-physics">Physics</span>
+              <span class="period-teacher">Mr. Ibrahim</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">8:50 – 9:40</span>
+              <span class="period-subject subject-biology">Biology</span>
+              <span class="period-teacher">Dr. Eze</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">10:00 – 10:50</span>
+              <span class="period-subject subject-math">Mathematics</span>
+              <span class="period-teacher">Mr. Okonkwo</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">10:50 – 11:40</span>
+              <span class="period-subject subject-english">English</span>
+              <span class="period-teacher">Mrs. Adeyemi</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">12:30 – 13:20</span>
+              <span class="period-subject subject-chemistry">Chemistry</span>
+              <span class="period-teacher">Mrs. Nwosu</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thursday -->
+        <div class="day-card" data-day="Thursday">
+          <div class="day-header">
+            <span class="day-name">Thursday</span>
+          </div>
+          <div class="day-periods">
+            <div class="period-item">
+              <span class="period-time">8:00 – 8:50</span>
+              <span class="period-subject subject-chemistry">Chemistry</span>
+              <span class="period-teacher">Mrs. Nwosu</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">8:50 – 9:40</span>
+              <span class="period-subject subject-physics">Physics</span>
+              <span class="period-teacher">Mr. Ibrahim</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">10:00 – 10:50</span>
+              <span class="period-subject subject-english">English</span>
+              <span class="period-teacher">Mrs. Adeyemi</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">10:50 – 11:40</span>
+              <span class="period-subject subject-math">Mathematics</span>
+              <span class="period-teacher">Mr. Okonkwo</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">12:30 – 13:20</span>
+              <span class="period-subject subject-biology">Biology</span>
+              <span class="period-teacher">Dr. Eze</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Friday -->
+        <div class="day-card" data-day="Friday">
+          <div class="day-header">
+            <span class="day-name">Friday</span>
+          </div>
+          <div class="day-periods">
+            <div class="period-item">
+              <span class="period-time">8:00 – 8:50</span>
+              <span class="period-subject subject-biology">Biology</span>
+              <span class="period-teacher">Dr. Eze</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">8:50 – 9:40</span>
+              <span class="period-subject subject-english">English</span>
+              <span class="period-teacher">Mrs. Adeyemi</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">10:00 – 10:50</span>
+              <span class="period-subject subject-math">Mathematics</span>
+              <span class="period-teacher">Mr. Okonkwo</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">10:50 – 11:40</span>
+              <span class="period-subject subject-chemistry">Chemistry</span>
+              <span class="period-teacher">Mrs. Nwosu</span>
+            </div>
+            <div class="period-item">
+              <span class="period-time">12:30 – 13:20</span>
+              <span class="period-subject subject-physics">Physics</span>
+              <span class="period-teacher">Mr. Ibrahim</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Schedule Legend -->
+      <div class="schedule-legend">
+        <span class="legend-item"><span class="legend-color legend-core"></span> Core Subjects</span>
+        <span class="legend-item"><span class="legend-color legend-science"></span> Science Subjects</span>
+        <span class="legend-item"><span class="legend-color legend-arts"></span> Arts & Social Sciences</span>
+      </div>
+    </section>
+
+    <!-- Results (placeholder) -->
+    <section class="dash-section" id="section-results">
+      <h2 style="margin-bottom:var(--space-lg);">Examination Results</h2>
+      <div class="announcements-list">
+        <p style="color:var(--text-secondary);">Your latest results will appear here. Please check back after the next examination period.</p>
+      </div>
+    </section>
+
+    <!-- Announcements -->
+    <section class="dash-section" id="section-announcements">
+      <!-- Section Header -->
+      <div class="announcements-header">
+        <h2 class="section-heading">📢 School Announcements</h2>
+        <span class="announcement-count">6 announcements</span>
+      </div>
+
+      <!-- Featured Announcement -->
+      <div class="featured-announcement">
+        <div class="featured-badge">🔔 Featured</div>
+        <div class="featured-content">
+          <h3>End of Term Examination Schedule</h3>
+          <p>The end‑of‑term examinations will begin on June 20th. Please review your timetable and prepare accordingly.</p>
+          <div class="featured-meta">
+            <span class="ann-category category-examination">Examination</span>
+            <span class="ann-date">June 1, 2027</span>
+            <span class="ann-priority priority-high">High Priority</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="announcements-filter-bar">
+        <button class="ann-filter-btn active" data-filter="all">All</button>
+        <button class="ann-filter-btn" data-filter="Academic">Academic</button>
+        <button class="ann-filter-btn" data-filter="Examination">Examination</button>
+        <button class="ann-filter-btn" data-filter="Event">Event</button>
+        <button class="ann-filter-btn" data-filter="Holiday">Holiday</button>
+        <button class="ann-filter-btn" data-filter="Administration">Administration</button>
+      </div>
+
+      <!-- Announcements List -->
+      <div class="announcements-list-modern" id="announcementsList">
+        <!-- 1. End of Term Exam Schedule (High Priority) -->
+        <div class="ann-card" data-category="Examination" data-priority="high">
+          <div class="ann-card-header">
+            <span class="ann-category category-examination">Examination</span>
+            <span class="ann-priority-dot priority-high" title="High Priority"></span>
+            <span class="ann-date">June 1, 2027</span>
+          </div>
+          <h4 class="ann-title">End of Term Examination Schedule</h4>
+          <p class="ann-excerpt">The end‑of‑term examinations will begin on June 20th. Please review your timetable and prepare accordingly.</p>
+          <div class="ann-full" style="display:none;">
+            <p>The timetable has been updated with all examination dates. Check your portal for personalised room assignments.</p>
+          </div>
+          <button class="ann-readmore">Read more</button>
+        </div>
+
+        <!-- 2. Mid-Term Break (Medium Priority) -->
+        <div class="ann-card" data-category="Holiday" data-priority="medium">
+          <div class="ann-card-header">
+            <span class="ann-category category-holiday">Holiday</span>
+            <span class="ann-priority-dot priority-medium" title="Medium Priority"></span>
+            <span class="ann-date">May 28, 2027</span>
+          </div>
+          <h4 class="ann-title">Mid-Term Break</h4>
+          <p class="ann-excerpt">There will be a mid‑term break from June 5th to June 7th. Classes resume on June 8th.</p>
+          <div class="ann-full" style="display:none;">
+            <p>Hostel students may remain on campus with prior permission. All extracurricular activities are suspended during the break.</p>
+          </div>
+          <button class="ann-readmore">Read more</button>
+        </div>
+
+        <!-- 3. Sports Day Event (Normal Priority) -->
+        <div class="ann-card" data-category="Event" data-priority="normal">
+          <div class="ann-card-header">
+            <span class="ann-category category-event">Event</span>
+            <span class="ann-priority-dot priority-normal" title="Normal Priority"></span>
+            <span class="ann-date">May 15, 2027</span>
+          </div>
+          <h4 class="ann-title">Inter‑House Sports Competition</h4>
+          <p class="ann-excerpt">The annual inter‑house sports competition will take place on Saturday, June 10th. All students are encouraged to participate.</p>
+          <div class="ann-full" style="display:none;">
+            <p>Wear your house colours and assemble at the sports field by 8:00 AM. Parents are cordially invited.</p>
+          </div>
+          <button class="ann-readmore">Read more</button>
+        </div>
+
+        <!-- 4. New Academic Calendar (Administration) -->
+        <div class="ann-card" data-category="Administration" data-priority="medium">
+          <div class="ann-card-header">
+            <span class="ann-category category-administration">Administration</span>
+            <span class="ann-priority-dot priority-medium" title="Medium Priority"></span>
+            <span class="ann-date">May 10, 2027</span>
+          </div>
+          <h4 class="ann-title">2027 Academic Calendar Released</h4>
+          <p class="ann-excerpt">The full academic calendar for the 2027 session has been published. Parents and students can now download it from the school website.</p>
+          <div class="ann-full" style="display:none;">
+            <p>Key dates include resumption on September 5th, mid‑term breaks, and holiday periods. Printed copies are available at the admin office.</p>
+          </div>
+          <button class="ann-readmore">Read more</button>
+        </div>
+
+        <!-- 5. Mathematics Workshop (Academic) -->
+        <div class="ann-card" data-category="Academic" data-priority="normal">
+          <div class="ann-card-header">
+            <span class="ann-category category-academic">Academic</span>
+            <span class="ann-priority-dot priority-normal" title="Normal Priority"></span>
+            <span class="ann-date">May 5, 2027</span>
+          </div>
+          <h4 class="ann-title">Mathematics Remedial Workshop</h4>
+          <p class="ann-excerpt">A remedial workshop for students who scored below 60% in Mathematics will be held every Saturday starting June 12th.</p>
+          <div class="ann-full" style="display:none;">
+            <p>Attendance is compulsory for all students in the targeted group. The venue is the school auditorium, 9:00 AM – 12:00 PM.</p>
+          </div>
+          <button class="ann-readmore">Read more</button>
+        </div>
+
+        <!-- 6. Parent‑Teacher Meeting (Administration) -->
+        <div class="ann-card" data-category="Administration" data-priority="high">
+          <div class="ann-card-header">
+            <span class="ann-category category-administration">Administration</span>
+            <span class="ann-priority-dot priority-high" title="High Priority"></span>
+            <span class="ann-date">April 28, 2027</span>
+          </div>
+          <h4 class="ann-title">Parent‑Teacher Conference</h4>
+          <p class="ann-excerpt">The second‑term parent‑teacher conference is scheduled for Saturday, June 3rd. All parents are encouraged to attend.</p>
+          <div class="ann-full" style="display:none;">
+            <p>Teachers will be available to discuss student performance and progress. Report cards will be issued on that day.</p>
+          </div>
+          <button class="ann-readmore">Read more</button>
+        </div>
+      </div>
+    </section>
+
+        <!-- Assignments -->
+    <section class="dash-section" id="section-assignments">
+      <h2 class="section-heading">My Assignments</h2>
+      <div class="assignments-student-list" id="studentAssignmentsList">
+        <!-- dynamically filled by JS -->
+      </div>
+      <div id="noAssignmentsMsg" style="display:none; text-align:center; padding:40px; color:var(--text-secondary);">
+        🎉 No assignments posted yet for your class.
+      </div>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>       FLWPUBK_TEST-f222c3f132825150aa2d39c9e3e77ab3-X

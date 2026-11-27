@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright International Secondary School | Home</title>
+    <meta
+      name="description"
+      content="Bright International Secondary School - Excellence in Education. Located in Mbieri Mbitaolu, Imo State, Nigeria."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- DARK MODE FLASH PREVENTION -->
+    <script>
+      (function() {
+        const saved = localStorage.getItem('bright_theme');
+        if (saved === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <!-- Premium Preloader -->
+    <!-- <div id="preloader">
+      <div class="preloader-content">
+        <div class="preloader-spinner"></div>
+        <div class="preloader-monogram">BISS</div>
+        <div class="preloader-sub">Loading…</div>
+      </div>
+    </div> -->
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">BI</div>
+          <div class="logo-text">
+            BRIGHT INTERNATIONAL
+            <span>Secondary School</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html" class="active">Academics</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+          <!-- DARK MODE TOGGLE -->
+          <li class="theme-toggle-item">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch to dark mode" aria-pressed="false">
+              <!-- Sun icon (default light mode) -->
+              <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <!-- Moon icon (hidden by default) -->
+              <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+          </li>
+          <li><a href="admission.html" class="nav-cta">Enroll Now</a></li>
+        </ul>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+
+  <!-- ============================================
+       ACADEMICS PAGE HEADER – Full‑Background Image Hero
+       ============================================ -->
+  <header class="page-header about-hero">
+    <div class="hero-overlay-about"></div>
+    <div class="about-hero-content fade-in">
+      <h1>Academic Excellence</h1>
+      <p class="hero-subtitle">
+        Explore our comprehensive curriculum, subject offerings, and commitment to world‑class education.
+      </p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Academics</span>
+      </div>
+    </div>
+    <div class="about-hero-wave">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,0 C480,90 960,30 1440,70 L1440,100 L0,100 Z" fill="currentColor"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ============================================
+       ACADEMIC STRUCTURE & STUDENT PROGRESSION
+       ============================================ -->
+  <section class="section academic-progression">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Our Academic Pathway</span>
+        <h2 class="section-title">Academic Structure & Student Progression</h2>
+        <p class="section-desc">
+          A clear and structured journey from foundational learning to specialized excellence.
+        </p>
+      </div>
+
+      <div class="progression-track">
+        <!-- Step 1 -->
+        <div class="progression-step fade-in">
+          <div class="step-marker">1</div>
+          <div class="step-card">
+            <h3>Junior Secondary (JSS 1–3)</h3>
+            <p>
+              Building strong foundations with a broad curriculum – Mathematics, English,
+              Basic Science, Social Studies, CCA, PHE, and more – nurturing well‑rounded
+              learners ready for the next stage.
+            </p>
+          </div>
+        </div>
+
+        <!-- Connector -->
+        <div class="step-connector" aria-hidden="true"></div>
+
+        <!-- Step 2 -->
+        <div class="progression-step fade-in">
+          <div class="step-marker">2</div>
+          <div class="step-card">
+            <h3>Senior Secondary Year 1 (SS1)</h3>
+            <p>
+              Introduction to broader academic pathways – students explore Science, Arts,
+              and Commercial subjects while strengthening core competencies.
+            </p>
+          </div>
+        </div>
+
+        <!-- Connector -->
+        <div class="step-connector" aria-hidden="true"></div>
+
+        <!-- Step 3 -->
+        <div class="progression-step fade-in">
+          <div class="step-marker">3</div>
+          <div class="step-card">
+            <h3>Specialization (SS2 – SS3)</h3>
+            <p>
+              Students select their preferred field – Science, Arts, or Commercial – and
+              dive deeper into specialized subjects, with focused WAEC/NECO
+              preparation and career readiness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ACADEMIC DEPARTMENTS – Outcome‑Focused
+       ============================================ -->
+  <section class="section academic-departments">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Our Specializations</span>
+        <h2 class="section-title">Academic Departments</h2>
+        <p class="section-desc">
+          Three focused pathways that open doors to top careers and lifelong success.
+        </p>
+      </div>
+
+      <div class="departments-grid">
+        <!-- Science Department -->
+        <div class="dept-card fade-in">
+          <div class="dept-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3>Science</h3>
+          <p>
+            A rigorous, lab‑driven curriculum that builds analytical thinkers and problem‑solvers.
+          </p>
+          <div class="dept-pathways">
+            <span class="pathway-label">Career Pathways</span>
+            <div class="pathway-tags">
+              <span>Medicine</span>
+              <span>Engineering</span>
+              <span>Research</span>
+              <span>Data Science</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arts Department -->
+        <div class="dept-card fade-in">
+          <div class="dept-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></path>
+            </svg>
+          </div>
+          <h3>Arts</h3>
+          <p>
+            Cultivating critical thinking, creativity, and cultural insight for a wide range of professions.
+          </p>
+          <div class="dept-pathways">
+            <span class="pathway-label">Career Pathways</span>
+            <div class="pathway-tags">
+              <span>Law</span>
+              <span>Media</span>
+              <span>Public Policy</span>
+              <span>Creative Arts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial Department -->
+        <div class="dept-card fade-in">
+          <div class="dept-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+              <line x1="12" y1="11" x2="12" y2="15"></line>
+              <line x1="8" y1="11" x2="16" y2="11"></line>
+            </svg>
+          </div>
+          <h3>Commercial</h3>
+          <p>
+            Building modern business acumen for future leaders in finance, commerce, and entrepreneurship.
+          </p>
+          <div class="dept-pathways">
+            <span class="pathway-label">Career Pathways</span>
+            <div class="pathway-tags">
+              <span>Accounting</span>
+              <span>Business</span>
+              <span>Finance</span>
+              <span>Marketing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SUBJECT LISTINGS – Modern Accordion
+       ============================================ -->
+  <section class="section subject-listing">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Curriculum Details</span>
+        <h2 class="section-title">Explore Our Subjects</h2>
+        <p class="section-desc">
+          A complete breakdown of subjects offered at each level and department.
+        </p>
+      </div>
+
+      <div class="accordion">
+        <!-- Junior Secondary -->
+        <details class="accordion-item fade-in" open>
+          <summary class="accordion-header">
+            <span class="accordion-icon">📘</span>
+            <span>Junior Secondary (JSS1 – JSS3)</span>
+          </summary>
+          <div class="accordion-body">
+            <div class="subjects-grid">
+              <div class="subject-item"><div class="dot"></div><span>English Language</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Mathematics</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Basic Science</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Basic Technology</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Social Studies</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Civic Education</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Agricultural Science</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Home Economics</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Business Studies</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Computer Studies / ICT</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Fine Arts / Creative Arts</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Physical & Health Education</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Religious Studies (CRK / IRK)</span></div>
+              <div class="subject-item"><div class="dot"></div><span>French Language</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Igbo Language</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Music</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Literature in English</span></div>
+              <div class="subject-item"><div class="dot"></div><span>Cultural & Creative Arts</span></div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Senior Secondary Core -->
+        <details class="accordion-item fade-in">
+          <summary class="accordion-header">
+            <span class="accordion-icon">📚</span>
+            <span>Senior Secondary Core (All Departments)</span>
+          </summary>
+          <div class="accordion-body">
+            <div class="subjects-grid">
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>English Language</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Mathematics</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Civic Education</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Computer Studies / ICT</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>One Nigerian Language</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Trade / Entrepreneurship</span></div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Science Department Subjects -->
+        <details class="accordion-item fade-in">
+          <summary class="accordion-header">
+            <span class="accordion-icon">🔬</span>
+            <span>Science Department</span>
+          </summary>
+          <div class="accordion-body">
+            <div class="subjects-grid">
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Physics</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Chemistry</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Biology</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Agricultural Science</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Further Mathematics</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Geography</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Health Science</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Technical Drawing</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Food & Nutrition</span></div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Arts Department Subjects -->
+        <details class="accordion-item fade-in">
+          <summary class="accordion-header">
+            <span class="accordion-icon">🎭</span>
+            <span>Arts / Humanities Department</span>
+          </summary>
+          <div class="accordion-body">
+            <div class="subjects-grid">
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Literature in English</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Government / Political Science</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>History</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Christian Religious Studies</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Islamic Religious Studies</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Visual Arts</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Music</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>French Language</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Economics</span></div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Commercial Department Subjects -->
+        <details class="accordion-item fade-in">
+          <summary class="accordion-header">
+            <span class="accordion-icon">💼</span>
+            <span>Commercial Department</span>
+          </summary>
+          <div class="accordion-body">
+            <div class="subjects-grid">
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Financial Accounting</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Economics</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Commerce</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Marketing</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Office Practice</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Insurance</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Book Keeping</span></div>
+              <div class="subject-item"><div class="dot" style="background: var(--gold);"></div><span>Typewriting</span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-content fade-in">
+        <h2>Ready to Start Your Academic Journey?</h2>
+        <p>Apply today and gain access to our world-class curriculum and experienced teachers.</p>
+        <a href="admission.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Apply Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Bright International Secondary School</h3>
+        <p>Nurturing future leaders through quality education, character development, and extracurricular excellence since 2005.</p>
+        <div class="footer-address">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Mbieri Mbitaolu, Imo State, Nigeria
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="admission.html">Admission</a>
+        <a href="login.html">Student Portal</a>
+        <a href="login.html">Teacher Portal</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <p>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          info@brightinternationalschool.edu.ng
+        </p>
+        <p>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +234 803 123 4567
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Bright International Secondary School. All rights reserved.</p>
+      <p>Designed with excellence in mind.</p>
+    </div>
+  </footer>
+
+  <!-- <script src="js/script.js"></script> -->
+
+        <!-- Premium Scroll‑to‑Top Button -->
+    <div class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+      <svg
+        class="scroll-chevron"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </div>
+    <script src="js/script.js"></script>
+
+
+    <!-- ============ CHATBOT WIDGET (Phase 1) ============ -->
+<div id="chatbot-widget">
+  <!-- Floating Action Button -->
+  <button
+    id="chatbot-toggle"
+    class="chatbot-toggle"
+    aria-label="Open chat with Bright International"
+    aria-expanded="false"
+  >
+<svg
+  class="chatbot-toggle-icon"
+  width="28"
+  height="28"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  <!-- Antenna -->
+  <line x1="12" y1="1" x2="12" y2="5" />
+  <circle cx="12" cy="1" r="1.2" fill="currentColor" stroke="none" />
+  <!-- Head -->
+  <rect x="3" y="5" width="18" height="13" rx="4" />
+  <!-- Gear (left ear area) -->
+  <circle cx="2.5" cy="12" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none" />
+  <circle cx="2.5" cy="12" r="1" fill="currentColor" stroke="none" />
+  <!-- Eyes (friendly, open expression) -->
+  <circle cx="8.5" cy="10.5" r="1.8" />
+  <circle cx="15.5" cy="10.5" r="1.8" />
+  <circle cx="8.5" cy="10.5" r="0.9" fill="currentColor" stroke="none" />
+  <circle cx="15.5" cy="10.5" r="0.9" fill="currentColor" stroke="none" />
+  <!-- Mouth (open, friendly smile) -->
+  <path d="M9 15 Q12 18 15 15" />
+  <path d="M9 15 Q12 16 15 15" fill="currentColor" stroke="none" opacity="0.4" />
+  <!-- Inner mouth colour (optional, using fill) -->
+</svg>
+  </button>
+
+  <!-- Chat Window -->
+  <div
+    id="chatbot-window"
+    class="chatbot-window"
+    role="dialog"
+    aria-labelledby="chatbot-heading"
+    aria-hidden="true"
+  >
+    <div class="chatbot-header">
+      <div class="chatbot-header-title">
+        <div class="chatbot-logo">BI</div>
+        <h3 id="chatbot-heading">Bright International Chat</h3>
+      </div>
+      <button
+        class="chatbot-close"
+        aria-label="Close chat"
+        id="chatbot-close"
+      >&times;</button>
+    </div>
+
+    <div class="chatbot-body">
+      <div
+        class="chatbot-messages"
+        id="chatbot-messages"
+        role="log"
+        aria-live="polite"
+        aria-relevant="additions"
+      ></div>
+    </div>
+
+    <div class="chatbot-footer">
+      <input
+        type="text"
+        id="chatbot-input"
+        class="chatbot-input"
+        placeholder="Type your message…"
+        aria-label="Type your message"
+        autocomplete="off"
+      />
+      <button
+        id="chatbot-send"
+        class="chatbot-send-btn"
+        aria-label="Send message"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+  
+</body>
+</html>
+

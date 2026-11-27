@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Bright International Secondary School</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+<body class="admin-dashboard-body">
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Sidebar -->
+  <aside class="admin-sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">BI</div>
+      Bright International
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" class="active" data-section="dashboard">📊 Dashboard</a>
+      <a href="#" data-section="students">🎓 Students</a>
+      <a href="#" data-section="teachers">👨‍🏫 Teachers</a>
+      <a href="#" data-section="classes">📚 Classes</a>
+      <a href="#" data-section="assignments">📝 Assignments</a>
+      <a href="#" data-section="announcements">📢 Announcements</a>
+      <a href="#" data-section="reports">📈 Reports</a>
+      <a href="#" data-section="settings">⚙️ Settings</a>
+      <a href="#" class="logout-link" id="logoutBtn">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Topbar -->
+  <header class="admin-topbar" id="topbar">
+    <div class="topbar-left">
+      <button class="mobile-menu-btn" id="menuToggle">☰</button>
+      <div class="topbar-welcome">
+        <span class="topbar-title">Admin Dashboard</span>
+        <span class="topbar-welcome-text">Welcome back, <strong id="topbarWelcomeName">Administrator</strong></span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-date" id="topbarDate"></div>
+<div class="notification-wrapper" id="notificationWrapper">
+  <button class="notification-icon" id="notificationBtn" aria-label="Notifications">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+      <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+    </svg>
+    <span class="notification-badge" id="notificationBadge">5</span>
+  </button>
+
+  <div class="notification-dropdown" id="notificationDropdown" style="display: none;">
+    <div class="notification-dropdown-header">
+      <h4>Notifications</h4>
+    </div>
+    <div class="notification-list">
+      <!-- Admin‑specific mock alerts -->
+      <div class="notification-item unread">
+        <span class="notification-icon-small">👨‍🎓</span>
+        <div class="notification-content">
+          <strong>New Student Registered</strong>
+          <span>Chidinma O. has been added to JSS 1A.</span>
+          <small>Just now</small>
+        </div>
+      </div>
+      <div class="notification-item unread">
+        <span class="notification-icon-small">👨‍🏫</span>
+        <div class="notification-content">
+          <strong>Teacher Account Updated</strong>
+          <span>Mr. Okonkwo’s subject assignment changed.</span>
+          <small>10 min ago</small>
+        </div>
+      </div>
+      <div class="notification-item unread">
+        <span class="notification-icon-small">📢</span>
+        <div class="notification-content">
+          <strong>Announcement Published</strong>
+          <span>Exam schedule released for all classes.</span>
+          <small>1 hour ago</small>
+        </div>
+      </div>
+      <div class="notification-item">
+        <span class="notification-icon-small">📝</span>
+        <div class="notification-content">
+          <strong>Assignment Created</strong>
+          <span>Mathematics assignment for JSS 2A.</span>
+          <small>2 hours ago</small>
+        </div>
+      </div>
+      <div class="notification-item">
+        <span class="notification-icon-small">⚙️</span>
+        <div class="notification-content">
+          <strong>System Settings Updated</strong>
+          <span>Term dates and grading scale updated.</span>
+          <small>Yesterday</small>
+        </div>
+      </div>
+    </div>
+    <button class="notification-mark-read" id="markReadBtn">
+      Mark all as read
+    </button>
+  </div>
+</div>
+      <div class="topbar-profile">
+        <div class="user-avatar" id="userAvatar">AD</div>
+        <div class="user-info">
+          <div class="user-name">Administrator</div>
+          <div class="user-role">Admin</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="admin-main" id="mainContent">
+
+    <!-- ========== DASHBOARD OVERVIEW ========== -->
+    <section class="dash-section active" id="section-dashboard">
+      <!-- Hero -->
+      <div class="admin-hero">
+        <div class="admin-hero-bg"></div>
+        <div class="admin-hero-content">
+          <h1>Welcome Back, Administrator</h1>
+          <p>Manage students, teachers, classes, and school activities from a centralized control system.</p>
+        </div>
+      </div>
+
+      <!-- Statistics Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">👨‍🎓</div>
+          <div class="stat-info">
+            <div class="stat-value">1,200</div>
+            <div class="stat-label">Total Students</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">👨‍🏫</div>
+          <div class="stat-info">
+            <div class="stat-value">85</div>
+            <div class="stat-label">Total Teachers</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📚</div>
+          <div class="stat-info">
+            <div class="stat-value">12</div>
+            <div class="stat-label">Total Classes</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📢</div>
+          <div class="stat-info">
+            <div class="stat-value">24</div>
+            <div class="stat-label">Announcements</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="quick-actions">
+        <button class="action-btn">➕ Add Student</button>
+        <button class="action-btn">👨‍🏫 Add Teacher</button>
+        <button class="action-btn">📚 Create Class</button>
+        <button class="action-btn">📢 Publish Announcement</button>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="recent-activity">
+        <h3 class="section-heading">🕐 Recent Activity</h3>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-dot"></div>
+            <div class="activity-content">
+              <span class="activity-date">Just now</span>
+              <span class="activity-title">New student registered</span>
+              <span class="activity-desc">Chidinma O. added to JSS 1A</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot"></div>
+            <div class="activity-content">
+              <span class="activity-date">5 min ago</span>
+              <span class="activity-title">Teacher added</span>
+              <span class="activity-desc">Mr. Okonkwo assigned to Mathematics</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot"></div>
+            <div class="activity-content">
+              <span class="activity-date">1 hour ago</span>
+              <span class="activity-title">Announcement published</span>
+              <span class="activity-desc">End‑of‑term exam schedule released</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot"></div>
+            <div class="activity-content">
+              <span class="activity-date">2 hours ago</span>
+              <span class="activity-title">Assignment created</span>
+              <span class="activity-desc">Mathematics assignment for JSS 2A</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STUDENTS MANAGEMENT ========== -->
+    <section class="dash-section" id="section-students">
+      <div class="section-header-row">
+        <h2 class="section-heading">Student Records</h2>
+        <input type="text" class="search-input" id="studentSearch" placeholder="Search students...">
+      </div>
+      <div class="table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Class</th>
+              <th>Admission No</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentTableBody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== TEACHERS MANAGEMENT ========== -->
+    <section class="dash-section" id="section-teachers">
+      <div class="section-header-row">
+        <h2 class="section-heading">Teacher Records</h2>
+        <input type="text" class="search-input" id="teacherSearch" placeholder="Search teachers...">
+      </div>
+      <div class="table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Staff ID</th>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Subject</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="teacherTableBody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== CLASSES MANAGEMENT ========== -->
+    <section class="dash-section" id="section-classes">
+      <h2 class="section-heading">Class List</h2>
+      <div class="classes-grid-admin" id="classesGrid">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- ========== ASSIGNMENTS MANAGEMENT ========== -->
+    <section class="dash-section" id="section-assignments">
+      <h2 class="section-heading">All Assignments</h2>
+      <div class="assignments-list-admin" id="assignmentsList">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- ========== ANNOUNCEMENTS MANAGEMENT ========== -->
+    <section class="dash-section" id="section-announcements">
+      <h2 class="section-heading">Manage Announcements</h2>
+      <div class="draft-announcement">
+        <h3>Publish New Announcement</h3>
+        <textarea placeholder="Write announcement..." class="draft-textarea"></textarea>
+        <button class="btn btn-primary">Publish</button>
+      </div>
+      <div class="announcements-list-admin" id="announcementsListAdmin">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- ========== REPORTS (placeholder) ========== -->
+    <section class="dash-section" id="section-reports">
+      <div class="placeholder-card">
+        <h3>📈 Reports</h3>
+        <p>Performance reports, attendance summaries, and academic analytics will appear here.</p>
+      </div>
+    </section>
+
+    <!-- ========== SETTINGS (placeholder) ========== -->
+    <section class="dash-section" id="section-settings">
+      <div class="placeholder-card">
+        <h3>⚙️ Settings</h3>
+        <p>System settings, user management, and configuration options will be available here.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/admin-dashboard.js"></script>
+</body>
+</html>

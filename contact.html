@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Bright International Secondary School</title>
+  <meta name="description" content="Get in touch with Bright International Secondary School in Mbieri Mbitaolu, Imo State, Nigeria.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- DARK MODE FLASH PREVENTION -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('bright_theme');
+      if (saved === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">BI</div>
+        <div class="logo-text">
+          BRIGHT INTERNATIONAL
+          <span>Secondary School</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="alumni.html">Alumni</a></li>
+        <li><a href="admission.html">Admission</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <!-- DARK MODE TOGGLE -->
+        <li class="theme-toggle-item">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch to dark mode" aria-pressed="false">
+            <!-- Sun icon -->
+            <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon icon (hidden by default) -->
+            <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </li>
+        <li><a href="admission.html" class="nav-cta">Enroll Now</a></li>
+      </ul>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header (matching other inner pages) -->
+  <header class="page-header">
+    <div class="hero-overlay-about"></div>
+    <div class="about-hero-content fade-in">
+      <h1>Contact Us</h1>
+      <p class="hero-subtitle">We would love to hear from you. Reach out for inquiries, visits, or partnerships.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Contact</span>
+      </div>
+    </div>
+    <div class="about-hero-wave">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,0 C480,90 960,30 1440,70 L1440,100 L0,100 Z" fill="currentColor"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ========== CONTACT INFORMATION CARDS ========== -->
+  <section class="contact-section-spaced">
+    <div class="contact-info-grid">
+      <!-- Address Card -->
+      <div class="contact-card fade-in">
+        <div class="contact-card-icon">&#9733;</div>
+        <h4>School Address</h4>
+        <p>Mbieri Mbitaolu,<br>Imo State, Nigeria</p>
+      </div>
+      <!-- Phone Card -->
+      <div class="contact-card fade-in">
+        <div class="contact-card-icon">&#9742;</div>
+        <h4>Phone Numbers</h4>
+        <p>+234 803 123 4567<br>+234 805 987 6543</p>
+      </div>
+      <!-- Email Card -->
+      <div class="contact-card fade-in">
+        <div class="contact-card-icon">&#9993;</div>
+        <h4>Email Address</h4>
+        <p>info@brightinternationalschool.edu.ng<br>admissions@brightinternationalschool.edu.ng</p>
+      </div>
+      <!-- Office Hours Card -->
+      <div class="contact-card fade-in">
+        <div class="contact-card-icon">&#9851;</div>
+        <h4>Office Hours</h4>
+        <p>Mon–Fri: 7:30 AM – 4:00 PM<br>Sat: 9:00 AM – 12:00 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ADMISSIONS HIGHLIGHT CARD ========== -->
+  <section class="contact-section-spaced" style="padding-top: 0;">
+    <div class="admissions-highlight fade-in">
+      <div class="admissions-text">
+        <h3>🎓 Admissions Enquiries</h3>
+        <p>Have questions about enrollment? Our admissions team is ready to help you. Call or email us directly, or visit the admissions page for detailed information.</p>
+      </div>
+      <div class="admissions-cta">
+        <a href="admission.html" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          Apply Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT FORM & QUICK ACTIONS ========== -->
+  <section class="contact-section-spaced" style="background:var(--off-white);">
+    <div style="max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:start;">
+      <!-- Modern Form -->
+      <div class="modern-form-card fade-in">
+        <h2>Send a Message</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Full Name</label>
+            <input type="text" id="contactName" class="form-control" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email Address</label>
+            <input type="email" id="contactEmail" class="form-control" placeholder="Your email address" required>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <input type="text" id="contactSubject" class="form-control" placeholder="Message subject">
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" class="form-control" rows="5" placeholder="Write your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="fade-in" style="display:flex;flex-direction:column;gap:var(--space-lg);">
+        <div class="quick-actions-grid" style="margin-top:0;max-width:100%;">
+          <a href="tel:+2348031234567" class="quick-action-card">
+            <span class="quick-action-icon">📞</span>
+            <span>Call School</span>
+          </a>
+          <a href="mailto:info@brightinternationalschool.edu.ng" class="quick-action-card">
+            <span class="quick-action-icon">✉️</span>
+            <span>Send Email</span>
+          </a>
+          <a href="https://wa.me/2348031234567" target="_blank" rel="noopener" class="quick-action-card">
+            <span class="quick-action-icon">💬</span>
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://www.google.com/maps?q=Mbieri+Mbitaolu+Imo+State+Nigeria" target="_blank" rel="noopener" class="quick-action-card">
+            <span class="quick-action-icon">📍</span>
+            <span>Get Directions</span>
+          </a>
+        </div>
+
+        <!-- Social Connection -->
+        <div class="social-section fade-in" style="padding:var(--space-xl);border-radius:var(--radius-lg);">
+          <h3 style="font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:var(--space-md);">Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><span style="font-weight:bold;">f</span></a>
+            <a href="#" class="social-link" aria-label="Instagram"><span style="font-weight:bold;">📷</span></a>
+            <a href="#" class="social-link" aria-label="Twitter / X"><span style="font-weight:bold;">𝕏</span></a>
+            <a href="#" class="social-link" aria-label="YouTube"><span style="font-weight:bold;">▶</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY CONTACT US ========== -->
+  <section class="contact-section-spaced" style="background:var(--white);">
+    <div style="max-width:var(--max-width);margin:0 auto;">
+      <div class="section-header fade-in">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Why Contact Bright International?</h2>
+        <p class="section-desc">Our dedicated team is here to support you with every enquiry.</p>
+      </div>
+      <div class="reasons-grid fade-in">
+        <div class="reason-card">
+          <div class="reason-icon">🎓</div>
+          <h4>Admissions Support</h4>
+          <p>Guidance on enrollment, entrance exams, and documentation.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon">📚</div>
+          <h4>Academic Guidance</h4>
+          <p>Information about curriculum, subjects, and learning pathways.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon">👨‍👩‍👧</div>
+          <h4>Parent Enquiries</h4>
+          <p>Updates on student progress, school policies, and parent-teacher meetings.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon">🤝</div>
+          <h4>Partnerships & Visits</h4>
+          <p>Schedule a campus tour or discuss collaboration opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Existing CTA Section (unchanged) -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-content fade-in">
+        <h2>Visit Our Campus</h2>
+        <p>We welcome prospective parents and students to tour our facilities and meet our staff.</p>
+        <a href="admission.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Schedule a Visit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (unchanged) -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Bright International Secondary School</h3>
+        <p>Nurturing future leaders through quality education, character development, and extracurricular excellence since 2005.</p>
+        <div class="footer-address">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Mbieri Mbitaolu, Imo State, Nigeria
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="admission.html">Admission</a>
+        <a href="login.html">Student Portal</a>
+        <a href="login.html">Teacher Portal</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <p>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          info@brightinternationalschool.edu.ng
+        </p>
+        <p>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +234 803 123 4567
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Bright International Secondary School. All rights reserved.</p>
+      <p>Designed with excellence in mind.</p>
+    </div>
+  </footer>
+
+  <!-- Premium Scroll‑to‑Top Button -->
+  <div class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+    <svg class="scroll-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </div>
+
+  <!-- Chatbot Widget (unchanged) -->
+  <div id="chatbot-widget">
+    <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Open chat with Bright International" aria-expanded="false">
+      <svg class="chatbot-toggle-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="12" y1="1" x2="12" y2="5" />
+        <circle cx="12" cy="1" r="1.2" fill="currentColor" stroke="none" />
+        <rect x="3" y="5" width="18" height="13" rx="4" />
+        <circle cx="2.5" cy="12" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none" />
+        <circle cx="2.5" cy="12" r="1" fill="currentColor" stroke="none" />
+        <circle cx="8.5" cy="10.5" r="1.8" />
+        <circle cx="15.5" cy="10.5" r="1.8" />
+        <circle cx="8.5" cy="10.5" r="0.9" fill="currentColor" stroke="none" />
+        <circle cx="15.5" cy="10.5" r="0.9" fill="currentColor" stroke="none" />
+        <path d="M9 15 Q12 18 15 15" />
+        <path d="M9 15 Q12 16 15 15" fill="currentColor" stroke="none" opacity="0.4" />
+      </svg>
+    </button>
+    <div id="chatbot-window" class="chatbot-window" role="dialog" aria-labelledby="chatbot-heading" aria-hidden="true">
+      <div class="chatbot-header">
+        <div class="chatbot-header-title">
+          <div class="chatbot-logo">BI</div>
+          <h3 id="chatbot-heading">Bright International Chat</h3>
+        </div>
+        <button class="chatbot-close" aria-label="Close chat" id="chatbot-close">&times;</button>
+      </div>
+      <div class="chatbot-body">
+        <div class="chatbot-messages" id="chatbot-messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+      </div>
+      <div class="chatbot-footer">
+        <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Type your message…" aria-label="Type your message" autocomplete="off" />
+        <button id="chatbot-send" class="chatbot-send-btn" aria-label="Send message">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
